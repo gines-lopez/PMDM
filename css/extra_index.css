@@ -16,7 +16,7 @@
     border-right: 1px solid #e0e0e0;
 }
 #mapa-general #head > section:nth-child(2), #mapa-general #head > section:nth-child(3){
-    width: 25%;
+    width: 49%;
 }
 
 #mapa-general #head > section p{
@@ -47,12 +47,12 @@
     width: 6%;
 }
 
-#body-ut-head > p:last-child, #body-ut-head > p:nth-child(11) {
+#body-ut-head > p:last-child, #body-ut-head > p:nth-child(6) {
     width: 10.5%;
 }
 
 #body-ut-head > p:first-child {
-    width: 25%;
+    width: 49%;
 }
 
 #body-ut-div{
@@ -81,15 +81,15 @@
     width: 6%;
 }
 
-.body-ut > p:last-child, .body-ut > p:nth-child(11) {
+.body-ut > p:last-child, .body-ut > p:nth-child(6) {
     min-width: 10.5%;
     width: 10.5%;
 }
 
 .body-ut> p:first-child {
     text-align: left;
-    min-width: 25%;
-    width: 25%;
+    min-width: 49%;
+    width: 49%;
     padding-left: 10px;
 }
 
