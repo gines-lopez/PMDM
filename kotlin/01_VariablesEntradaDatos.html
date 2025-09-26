@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://github.com/gines-lopez/PMDM/ut/ut01/02_IntroAndroid.html">
+        <link rel="canonical" href="https://github.com/gines-lopez/PMDM/kotlin/01_VariablesEntradaDatos.html">
       
       
-        <link rel="prev" href="01_TecnologiasMoviles.html">
+        <link rel="prev" href="00_Intro.html">
       
       
-        <link rel="next" href="03_FundamentosAPP.html">
+        <link rel="next" href="02_ElementosControl.html">
       
       
-      <link rel="icon" href="../../img/favicon.ico">
+      <link rel="icon" href="../img/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
     
     
       
-        <title>02. Introducción a Android - Programación multimedia y dispositivos móviles</title>
+        <title>Variables y entrada de datos - Programación multimedia y dispositivos móviles</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,22 +48,22 @@
       
     
     
-      <link rel="stylesheet" href="../../css/extra_general.css">
+      <link rel="stylesheet" href="../css/extra_general.css">
     
-      <link rel="stylesheet" href="../../css/extra_index.css">
+      <link rel="stylesheet" href="../css/extra_index.css">
     
-      <link rel="stylesheet" href="../../css/extra_pd.css">
+      <link rel="stylesheet" href="../css/extra_pd.css">
     
-      <link rel="stylesheet" href="../../css/extra_tablasresumen.css">
+      <link rel="stylesheet" href="../css/extra_tablasresumen.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -72,7 +72,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduccion-a-android" class="md-skip">
+        <a href="#ut2-kotlin-variables-y-entrada-de-datos" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -107,9 +107,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="../../index.html" title="Programación multimedia y dispositivos móviles" class="md-header__button md-logo" aria-label="Programación multimedia y dispositivos móviles" data-md-component="logo">
+    <a href="../index.html" title="Programación multimedia y dispositivos móviles" class="md-header__button md-logo" aria-label="Programación multimedia y dispositivos móviles" data-md-component="logo">
       
-  <img src="../../img/logofp.png" alt="logo">
+  <img src="../img/logofp.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              02. Introducción a Android
+              Variables y entrada de datos
             
           </span>
         </div>
@@ -232,9 +232,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../index.html" title="Programación multimedia y dispositivos móviles" class="md-nav__button md-logo" aria-label="Programación multimedia y dispositivos móviles" data-md-component="logo">
+    <a href="../index.html" title="Programación multimedia y dispositivos móviles" class="md-nav__button md-logo" aria-label="Programación multimedia y dispositivos móviles" data-md-component="logo">
       
-  <img src="../../img/logofp.png" alt="logo">
+  <img src="../img/logofp.png" alt="logo">
 
     </a>
     Programación multimedia y dispositivos móviles
@@ -249,7 +249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../index.html" class="md-nav__link">
+      <a href="../index.html" class="md-nav__link">
         
   
   
@@ -268,167 +268,12 @@
       
   
   
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Kotlin
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            Kotlin
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../kotlin/00_Intro.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Introducción a Kotlin
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../kotlin/01_VariablesEntradaDatos.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Variables y entrada de datos
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../kotlin/02_ElementosControl.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Estructuras de control
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../kotlin/03_FunPOOCol.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Funciones, colecciones y objetos
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
   
     
     
-      
-        
-      
-        
-      
-        
-      
-        
       
         
       
@@ -446,15 +291,15 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
-    UT 01. Análisis de tecnologías para aplicaciones en dispositivos móviles
+    Kotlin
     
   </span>
   
@@ -462,10 +307,10 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            UT 01. Análisis de tecnologías para aplicaciones en dispositivos móviles
+            Kotlin
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -476,35 +321,12 @@
   
   
     <li class="md-nav__item">
-      <a href="ResumenUT.html" class="md-nav__link">
+      <a href="00_Intro.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Propuesta didáctica UT 01
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="01_TecnologiasMoviles.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    01. Tecnologías móviles
+    Introducción a Kotlin
     
   </span>
   
@@ -536,7 +358,7 @@
   
   
   <span class="md-ellipsis">
-    02. Introducción a Android
+    Variables y entrada de datos
     
   </span>
   
@@ -544,12 +366,12 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="02_IntroAndroid.html" class="md-nav__link md-nav__link--active">
+      <a href="01_VariablesEntradaDatos.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    02. Introducción a Android
+    Variables y entrada de datos
     
   </span>
   
@@ -572,38 +394,59 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#licencia-y-flexibilidad" class="md-nav__link">
+  <a href="#primeros-pasos-con-kotlin" class="md-nav__link">
     <span class="md-ellipsis">
-      Licencia y flexibilidad
+      Primeros pasos con Kotlin
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#componentes-principales-de-android" class="md-nav__link">
+  <a href="#variables" class="md-nav__link">
     <span class="md-ellipsis">
-      Componentes principales de Android
+      Variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mutabilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mutabilidad
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#quien-desarrolla-android" class="md-nav__link">
-    <span class="md-ellipsis">
-      ¿Quién desarrolla Android?
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#actividades" class="md-nav__link">
+  <a href="#entrada-de-datos-por-consola" class="md-nav__link">
     <span class="md-ellipsis">
-      Actividades
+      Entrada de datos por consola
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Entrada de datos por consola">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#null-safety" class="md-nav__link">
+    <span class="md-ellipsis">
+      Null Safety
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -623,7 +466,185 @@
   
   
     <li class="md-nav__item">
-      <a href="03_FundamentosAPP.html" class="md-nav__link">
+      <a href="02_ElementosControl.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estructuras de control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03_FunPOOCol.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funciones, colecciones y objetos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UT 01. Análisis de tecnologías para aplicaciones en dispositivos móviles
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            UT 01. Análisis de tecnologías para aplicaciones en dispositivos móviles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut/ut01/ResumenUT.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Propuesta didáctica UT 01
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut/ut01/01_TecnologiasMoviles.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01. Tecnologías móviles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut/ut01/02_IntroAndroid.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02. Introducción a Android
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut/ut01/03_FundamentosAPP.html" class="md-nav__link">
         
   
   
@@ -646,7 +667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_RecursosAPP.html" class="md-nav__link">
+      <a href="../ut/ut01/04_RecursosAPP.html" class="md-nav__link">
         
   
   
@@ -669,7 +690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="05_ClaseR.html" class="md-nav__link">
+      <a href="../ut/ut01/05_ClaseR.html" class="md-nav__link">
         
   
   
@@ -692,7 +713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="06_EstructuraProyecto.html" class="md-nav__link">
+      <a href="../ut/ut01/06_EstructuraProyecto.html" class="md-nav__link">
         
   
   
@@ -715,7 +736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="07_Permisos.html" class="md-nav__link">
+      <a href="../ut/ut01/07_Permisos.html" class="md-nav__link">
         
   
   
@@ -754,48 +775,114 @@
 
 
 
-<h1 id="introduccion-a-android">Introducción a Android<a class="headerlink" href="#introduccion-a-android" title="Permanent link">&para;</a></h1>
-<p>Android es uno de los sistemas operativos más importantes del mundo porque está en la mayoría de los móviles.<br />
-Está basado en <strong>Linux</strong>, lo que le da estabilidad y seguridad, pero adaptado para usarse en dispositivos con pantalla táctil.</p>
-<h2 id="licencia-y-flexibilidad">Licencia y flexibilidad<a class="headerlink" href="#licencia-y-flexibilidad" title="Permanent link">&para;</a></h2>
-<p>Android se distribuye bajo la <a href="https://es.wikipedia.org/wiki/Apache_License"><strong>licencia Apache</strong></a>, que permite a los fabricantes <strong>modificarlo y añadir sus propias funciones</strong> sin tener que compartirlas con la comunidad.  </p>
-<p>Por eso existen tantas versiones y apariencias distintas de Android (Samsung One UI, Xiaomi MIUI, etc.).</p>
-<h2 id="componentes-principales-de-android">Componentes principales de Android<a class="headerlink" href="#componentes-principales-de-android" title="Permanent link">&para;</a></h2>
-<p>Android no es solo el sistema, también incluye herramientas y librerías para crear aplicaciones. Sus partes más importantes son:</p>
+<h1 id="ut2-kotlin-variables-y-entrada-de-datos">UT2 – Kotlin: Variables y entrada de datos<a class="headerlink" href="#ut2-kotlin-variables-y-entrada-de-datos" title="Permanent link">&para;</a></h1>
+<h2 id="primeros-pasos-con-kotlin">Primeros pasos con Kotlin<a class="headerlink" href="#primeros-pasos-con-kotlin" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Núcleo de Linux</strong>: gestiona memoria, procesos y hardware.  </li>
-<li><strong>Bibliotecas</strong>: por ejemplo, SQLite (bases de datos), WebKit (navegador), OpenGL (gráficos).  </li>
-<li><strong>Entorno de ejecución</strong>: donde se ejecutan las apps.  </li>
-<li><strong>Framework</strong>: conjunto de servicios para que las aplicaciones funcionen (notificaciones, cámara, etc.).  </li>
-<li><strong>SDK (Software Development Kit)</strong>: kit con herramientas para programar apps.  </li>
-<li><strong>Interfaz de usuario</strong>: pensada para pantallas táctiles.  </li>
-<li><strong>Apps preinstaladas</strong>: como teléfono, contactos o navegador.  </li>
-<li><strong>Google Play</strong>: la tienda oficial para descargar aplicaciones.</li>
+<li>Se recomienda usar <strong>IntelliJ</strong> o <strong>Android Studio</strong>.  </li>
+<li>Todo programa comienza en la función <code>main</code>:  </li>
 </ul>
-<h2 id="quien-desarrolla-android">¿Quién desarrolla Android?<a class="headerlink" href="#quien-desarrolla-android" title="Permanent link">&para;</a></h2>
-<p>Aunque solemos pensar que Android “es de Google”, en realidad lo mantiene la <strong><a href="https://es.wikipedia.org/wiki/Open_Handset_Alliance">Open Handset Alliance</a></strong>, un grupo de empresas que incluyen:</p>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-0-1"><span class="linenos" data-linenos="1 "></span><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">)</span>
+</span><span id="__span-0-3"><span class="linenos" data-linenos="3 "></span><span class="p">}</span>
+</span></code></pre></div>
 <ul>
-<li>Operadoras de telefonía.  </li>
-<li>Fabricantes de móviles.  </li>
-<li>Empresas de procesadores.  </li>
-<li>Compañías de software y marketing.  </li>
+<li>Para ejecutar el programa usamos las herramientas de compilación o debug del IDE.  </li>
+<li>Kotlin se caracteriza por ser <strong>conciso</strong>.</li>
 </ul>
-<p>Google es el líder del proyecto, pero no está sola.</p>
 <div class="admonition quote">
-<p class="admonition-title">Richard Stallman</p>
-<p>Android is a major step towards an ethical, user-controlled, free-software portable phone, but there is a long way to go.”</p>
+<p class="admonition-title">Lema de Kotlin</p>
+<p>Less is more</p>
 </div>
-<h2 id="actividades">Actividades<a class="headerlink" href="#actividades" title="Permanent link">&para;</a></h2>
+<h2 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<p><strong><abbr title="Actividades de clase.">AC</abbr> 101</strong> (<abbr title="Aplica tecnologías de desarrollo para dispositivos móviles evaluando sus características y capacidades.">RA1</abbr> / <abbr title="Se han instalado, configurado y utilizado entornos de trabajo para el desarrollo de aplicaciones para dispositivos móviles.">CE1c</abbr> <abbr title="Se han identificado configuraciones que clasifican los dispositivos móviles en base a sus características.">CE1d</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 1p) Documenta el proceso de generar un emulador en Android Studio y muestra las especificaciones técnicas que has decidido que tenga.</p>
-</li>
-<li>
-<p><strong><abbr title="Actividades de clase.">AC</abbr> 102</strong> (<abbr title="Aplica tecnologías de desarrollo para dispositivos móviles evaluando sus características y capacidades.">RA1</abbr> / <abbr title="Se han analizado las limitaciones que plantea la ejecución de aplicaciones en los dispositivos móviles.">CE1a</abbr> <abbr title="Se han identificado configuraciones que clasifican los dispositivos móviles en base a sus características.">CE1d</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 1p) Busca qué mejoras introducen iOS 18 y Android 15 respecto a seguridad o IA. Resume en 5 líneas.  </p>
-</li>
-<li>
-<p><strong><abbr title="Prácticas">PR</abbr> 103</strong> (<abbr title="Aplica tecnologías de desarrollo para dispositivos móviles evaluando sus características y capacidades.">RA1</abbr> / <abbr title="Se han analizado las limitaciones que plantea la ejecución de aplicaciones en los dispositivos móviles.">CE1a</abbr> <abbr title="Se han identificado las tecnologías de desarrollo de aplicaciones para dispositivos móviles.">CE1b</abbr> <abbr title="Se han instalado, configurado y utilizado entornos de trabajo para el desarrollo de aplicaciones para dispositivos móviles.">CE1c</abbr> / <abbr title="Rúbrica actividad individual.">IC2</abbr>/ 3) Siguiendo el <a href="https://www.youtube.com/watch?v=BQaxPwZWboA">vídeo de Youtube de MoureDev</a>, realiza una guía, lo más profesional posible, sobre la creación de una APP para Android conocida como el famoso “HolaMundo”.  </p>
-</li>
+<li>Una variable es un espacio de memoria con <strong>nombre</strong> y <strong>tipo</strong>.  </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Categoría</th>
+<th>Tipo</th>
+<th>Rango / Características</th>
+<th>Caso de uso en código</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Numéricos enteros</strong></td>
+<td>Byte</td>
+<td>-128 a 127</td>
+<td><code>val edad: Byte = 25</code></td>
+</tr>
+<tr>
+<td></td>
+<td>Short</td>
+<td>-32 768 a 32 767</td>
+<td><code>val temperatura: Short = -15</code></td>
+</tr>
+<tr>
+<td></td>
+<td>Int</td>
+<td>-2 147 483 648 a 2 147 483 647</td>
+<td><code>val contador: Int = 1000</code></td>
+</tr>
+<tr>
+<td></td>
+<td>Long</td>
+<td>-9.22e18 a 9.22e18</td>
+<td><code>val timestamp: Long = 1695823945000</code></td>
+</tr>
+<tr>
+<td><strong>Numéricos decimales</strong></td>
+<td>Float</td>
+<td>Menor precisión (~7 decimales)</td>
+<td><code>val piAprox: Float = 3.14f</code></td>
+</tr>
+<tr>
+<td></td>
+<td>Double</td>
+<td>Mayor precisión (~15 decimales)</td>
+<td><code>val pi: Double = 3.141592653589793</code></td>
+</tr>
+<tr>
+<td><strong>Otros tipos</strong></td>
+<td>String</td>
+<td>Texto</td>
+<td><code>val nombre: String = "Kotlin"</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="mutabilidad">Mutabilidad<a class="headerlink" href="#mutabilidad" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>val</code>: inmutable (no cambia su valor).  </li>
+<li><code>var</code>: mutable (puede cambiar).  </li>
+</ul>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-1-1"><span class="linenos" data-linenos="1 "></span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Kotlin&quot;</span>
+</span><span id="__span-1-2"><span class="linenos" data-linenos="2 "></span><span class="kd">var</span><span class="w"> </span><span class="nv">edad</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20</span>
+</span><span id="__span-1-3"><span class="linenos" data-linenos="3 "></span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">21</span>
+</span></code></pre></div>
+<h2 id="entrada-de-datos-por-consola">Entrada de datos por consola<a class="headerlink" href="#entrada-de-datos-por-consola" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Mostrar datos: <code>print()</code> y <code>println()</code>.  </li>
+<li>Leer datos: <code>readLine()</code> → devuelve un <code>String</code>.  </li>
+<li>Conversión de tipos con métodos como <code>toInt()</code>.  </li>
+</ul>
+<p>Ejemplo:  </p>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-2-1"><span class="linenos" data-linenos=" 1 "></span><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Ingrese primer valor: &quot;</span><span class="p">)</span>
+</span><span id="__span-2-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">valor1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readLine</span><span class="p">()</span><span class="o">!!</span><span class="p">.</span><span class="na">toInt</span><span class="p">()</span>
+</span><span id="__span-2-4"><span class="linenos" data-linenos=" 4 "></span>
+</span><span id="__span-2-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Ingrese segundo valor: &quot;</span><span class="p">)</span>
+</span><span id="__span-2-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">valor2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readLine</span><span class="p">()</span><span class="o">!!</span><span class="p">.</span><span class="na">toInt</span><span class="p">()</span>
+</span><span id="__span-2-7"><span class="linenos" data-linenos=" 7 "></span>
+</span><span id="__span-2-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">valor1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">valor2</span>
+</span><span id="__span-2-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;La suma es </span><span class="si">$</span><span class="n">suma</span><span class="s">&quot;</span><span class="p">)</span>
+</span><span id="__span-2-10"><span class="linenos" data-linenos="10 "></span><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="null-safety">Null Safety<a class="headerlink" href="#null-safety" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>readLine()</code> puede devolver <code>null</code>.  </li>
+<li>Para forzar que no lo sea: <code>readLine()!!</code>.  </li>
+<li>Kotlin prioriza la <strong>seguridad</strong> ante errores en tiempo de ejecución.</li>
 </ul>
 <!-- Resultados de Aprendizaje & Criterios de Evaluación -->
 <!-- Instrumentos de Evaluación -->
@@ -837,7 +924,7 @@ Está basado en <strong>Linux</strong>, lo que le da estabilidad y seguridad, pe
       <nav class="md-footer__inner md-grid" aria-label="Pie" >
         
           
-          <a href="01_TecnologiasMoviles.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 01. Tecnologías móviles">
+          <a href="00_Intro.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Introducción a Kotlin">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -847,20 +934,20 @@ Está basado en <strong>Linux</strong>, lo que le da estabilidad y seguridad, pe
                 Anterior
               </span>
               <div class="md-ellipsis">
-                01. Tecnologías móviles
+                Introducción a Kotlin
               </div>
             </div>
           </a>
         
         
           
-          <a href="03_FundamentosAPP.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 03. Fundamentos de una aplicación">
+          <a href="02_ElementosControl.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Estructuras de control">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Siguiente
               </span>
               <div class="md-ellipsis">
-                03. Fundamentos de una aplicación
+                Estructuras de control
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -952,10 +1039,10 @@ Está basado en <strong>Linux</strong>, lo que le da estabilidad y seguridad, pe
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "toc.integrate", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.footer", "toc.follow", "content.tooltips", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "toc.integrate", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.footer", "toc.follow", "content.tooltips", "content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});

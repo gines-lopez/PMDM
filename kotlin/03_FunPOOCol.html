@@ -1,0 +1,1289 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://github.com/gines-lopez/PMDM/kotlin/03_FunPOOCol.html">
+      
+      
+        <link rel="prev" href="02_ElementosControl.html">
+      
+      
+        <link rel="next" href="../ut/ut01/ResumenUT.html">
+      
+      
+      <link rel="icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Funciones, colecciones y objetos - Programación multimedia y dispositivos móviles</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/extra_general.css">
+    
+      <link rel="stylesheet" href="../css/extra_index.css">
+    
+      <link rel="stylesheet" href="../css/extra_pd.css">
+    
+      <link rel="stylesheet" href="../css/extra_tablasresumen.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#funciones-colecciones-y-objetos" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../index.html" title="Programación multimedia y dispositivos móviles" class="md-header__button md-logo" aria-label="Programación multimedia y dispositivos móviles" data-md-component="logo">
+      
+  <img src="../img/logofp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Programación multimedia y dispositivos móviles
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Funciones, colecciones y objetos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="pink"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="light-green" data-md-color-accent="pink"  aria-label="Cambiar a modo día"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Programación multimedia y dispositivos móviles" class="md-nav__button md-logo" aria-label="Programación multimedia y dispositivos móviles" data-md-component="logo">
+      
+  <img src="../img/logofp.png" alt="logo">
+
+    </a>
+    Programación multimedia y dispositivos móviles
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kotlin
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Kotlin
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="00_Intro.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción a Kotlin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01_VariablesEntradaDatos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variables y entrada de datos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02_ElementosControl.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estructuras de control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Funciones, colecciones y objetos
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="03_FunPOOCol.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funciones, colecciones y objetos
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definicion-de-funciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definición de funciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definición de funciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintaxis-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sintaxis básica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funciones-con-valores-por-defecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funciones con valores por defecto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funciones-de-una-sola-expresion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funciones de una sola expresión
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manejo-de-arrays-y-colecciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manejo de Arrays y Colecciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manejo de Arrays y Colecciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arrays
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conjuntos-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conjuntos (Set)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapas-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mapas (Map)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicion-y-creacion-de-objetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definición y creación de objetos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definición y creación de objetos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declaracion-de-una-clase-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Declaración de una clase simple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-un-objeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crear un objeto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-dentro-de-una-clase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Métodos dentro de una clase
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-manejo-de-objetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de manejo de objetos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-vs-data-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      class vs data class
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actividades-no-evaluables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actividades (no evaluables)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UT 01. Análisis de tecnologías para aplicaciones en dispositivos móviles
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            UT 01. Análisis de tecnologías para aplicaciones en dispositivos móviles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut/ut01/ResumenUT.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Propuesta didáctica UT 01
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut/ut01/01_TecnologiasMoviles.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01. Tecnologías móviles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut/ut01/02_IntroAndroid.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    02. Introducción a Android
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut/ut01/03_FundamentosAPP.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    03. Fundamentos de una aplicación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut/ut01/04_RecursosAPP.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    04. Recursos de una aplicación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut/ut01/05_ClaseR.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    05. La clase R
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut/ut01/06_EstructuraProyecto.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    06. Estructura de un proyecto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ut/ut01/07_Permisos.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    07. Permisos en Android
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="funciones-colecciones-y-objetos">Funciones, Colecciones y Objetos<a class="headerlink" href="#funciones-colecciones-y-objetos" title="Permanent link">&para;</a></h1>
+<h2 id="definicion-de-funciones">Definición de funciones<a class="headerlink" href="#definicion-de-funciones" title="Permanent link">&para;</a></h2>
+<p>En Kotlin, una <strong>función</strong> es un bloque de código reutilizable que puede recibir parámetros y devolver un valor.</p>
+<h3 id="sintaxis-basica">Sintaxis básica<a class="headerlink" href="#sintaxis-basica" title="Permanent link">&para;</a></h3>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-0-1"><span class="linenos" data-linenos="1 "></span><span class="kd">fun</span><span class="w"> </span><span class="nf">nombreFuncion</span><span class="p">(</span><span class="n">param1</span><span class="p">:</span><span class="w"> </span><span class="n">Tipo</span><span class="p">,</span><span class="w"> </span><span class="n">param2</span><span class="p">:</span><span class="w"> </span><span class="n">Tipo</span><span class="p">):</span><span class="w"> </span><span class="n">TipoDeRetorno</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="c1">// instrucciones</span>
+</span><span id="__span-0-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">resultado</span>
+</span><span id="__span-0-4"><span class="linenos" data-linenos="4 "></span><span class="p">}</span>
+</span></code></pre></div>
+<ul>
+<li><strong>fun</strong>: palabra clave para declarar funciones.  </li>
+<li><strong>parámetros</strong>: van entre paréntesis, con su tipo.  </li>
+<li><strong>tipo de retorno</strong>: después de los <code>:</code> (se omite si devuelve <code>Unit</code>, equivalente a <code>void</code> en Java).  </li>
+</ul>
+<h3 id="ejemplo">Ejemplo<a class="headerlink" href="#ejemplo" title="Permanent link">&para;</a></h3>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-1-1"><span class="linenos" data-linenos="1 "></span><span class="kd">fun</span><span class="w"> </span><span class="nf">saludar</span><span class="p">(</span><span class="n">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">):</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Hola, </span><span class="si">$</span><span class="n">nombre</span><span class="s">!&quot;</span>
+</span><span id="__span-1-3"><span class="linenos" data-linenos="3 "></span><span class="p">}</span>
+</span><span id="__span-1-4"><span class="linenos" data-linenos="4 "></span>
+</span><span id="__span-1-5"><span class="linenos" data-linenos="5 "></span><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-6"><span class="linenos" data-linenos="6 "></span><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">saludar</span><span class="p">(</span><span class="s">&quot;Kotlin&quot;</span><span class="p">))</span>
+</span><span id="__span-1-7"><span class="linenos" data-linenos="7 "></span><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="funciones-con-valores-por-defecto">Funciones con valores por defecto<a class="headerlink" href="#funciones-con-valores-por-defecto" title="Permanent link">&para;</a></h3>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-2-1"><span class="linenos" data-linenos="1 "></span><span class="kd">fun</span><span class="w"> </span><span class="nf">sumar</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">):</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span>
+</span><span id="__span-2-3"><span class="linenos" data-linenos="3 "></span><span class="p">}</span>
+</span><span id="__span-2-4"><span class="linenos" data-linenos="4 "></span>
+</span><span id="__span-2-5"><span class="linenos" data-linenos="5 "></span><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-6"><span class="linenos" data-linenos="6 "></span><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">sumar</span><span class="p">(</span><span class="m">5</span><span class="p">))</span><span class="w">      </span><span class="c1">// usa el valor por defecto b=10</span>
+</span><span id="__span-2-7"><span class="linenos" data-linenos="7 "></span><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">sumar</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">))</span><span class="w">   </span><span class="c1">// sobrescribe el valor de b</span>
+</span><span id="__span-2-8"><span class="linenos" data-linenos="8 "></span><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="funciones-de-una-sola-expresion">Funciones de una sola expresión<a class="headerlink" href="#funciones-de-una-sola-expresion" title="Permanent link">&para;</a></h3>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-3-1"><span class="linenos" data-linenos="1 "></span><span class="kd">fun</span><span class="w"> </span><span class="nf">cuadrado</span><span class="p">(</span><span class="n">x</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span>
+</span></code></pre></div>
+<hr />
+<h2 id="manejo-de-arrays-y-colecciones">Manejo de Arrays y Colecciones<a class="headerlink" href="#manejo-de-arrays-y-colecciones" title="Permanent link">&para;</a></h2>
+<p>Kotlin ofrece estructuras para almacenar y manipular grupos de datos.</p>
+<h3 id="arrays">Arrays<a class="headerlink" href="#arrays" title="Permanent link">&para;</a></h3>
+<p>Un <strong>Array</strong> es una estructura de tamaño fijo con elementos del mismo tipo.</p>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-4-1"><span class="linenos" data-linenos=" 1 "></span><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-2"><span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arrayOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">)</span>
+</span><span id="__span-4-3"><span class="linenos" data-linenos=" 3 "></span>
+</span><span id="__span-4-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">numeros</span><span class="o">[</span><span class="m">0</span><span class="o">]</span><span class="p">)</span><span class="w">    </span><span class="c1">// acceder al primer elemento</span>
+</span><span id="__span-4-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="n">numeros</span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="w">        </span><span class="c1">// modificar el segundo</span>
+</span><span id="__span-4-6"><span class="linenos" data-linenos=" 6 "></span>
+</span><span id="__span-4-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">numeros</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span><span id="__span-4-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-10"><span class="linenos" data-linenos="10 "></span><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="listas">Listas<a class="headerlink" href="#listas" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>listOf()</code> → lista <strong>inmutable</strong>.  </li>
+<li><code>mutableListOf()</code> → lista <strong>mutable</strong>.  </li>
+</ul>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-5-1"><span class="linenos" data-linenos="1 "></span><span class="kd">val</span><span class="w"> </span><span class="nv">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="p">)</span>
+</span><span id="__span-5-2"><span class="linenos" data-linenos="2 "></span><span class="kd">val</span><span class="w"> </span><span class="nv">listaMutable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mutableListOf</span><span class="p">(</span><span class="s">&quot;X&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Y&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Z&quot;</span><span class="p">)</span>
+</span><span id="__span-5-3"><span class="linenos" data-linenos="3 "></span>
+</span><span id="__span-5-4"><span class="linenos" data-linenos="4 "></span><span class="n">println</span><span class="p">(</span><span class="n">lista</span><span class="o">[</span><span class="m">0</span><span class="o">]</span><span class="p">)</span><span class="w">         </span><span class="c1">// A</span>
+</span><span id="__span-5-5"><span class="linenos" data-linenos="5 "></span><span class="n">listaMutable</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;W&quot;</span><span class="p">)</span><span class="w">     </span><span class="c1">// se puede modificar</span>
+</span></code></pre></div>
+<h3 id="conjuntos-set">Conjuntos (Set)<a class="headerlink" href="#conjuntos-set" title="Permanent link">&para;</a></h3>
+<p>Almacenan elementos <strong>únicos</strong> (sin duplicados).  </p>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-6-1"><span class="linenos" data-linenos="1 "></span><span class="kd">val</span><span class="w"> </span><span class="nv">conjunto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">setOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w">     </span><span class="c1">// {1, 2, 3}</span>
+</span><span id="__span-6-2"><span class="linenos" data-linenos="2 "></span><span class="kd">val</span><span class="w"> </span><span class="nv">conjuntoMutable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mutableSetOf</span><span class="p">(</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">)</span>
+</span><span id="__span-6-3"><span class="linenos" data-linenos="3 "></span><span class="n">conjuntoMutable</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="m">7</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="mapas-map">Mapas (Map)<a class="headerlink" href="#mapas-map" title="Permanent link">&para;</a></h3>
+<p>Almacenan <strong>pares clave-valor</strong>.  </p>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-7-1"><span class="linenos" data-linenos="1 "></span><span class="kd">val</span><span class="w"> </span><span class="nv">mapa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mapOf</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="s">&quot;Uno&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="s">&quot;Dos&quot;</span><span class="p">)</span>
+</span><span id="__span-7-2"><span class="linenos" data-linenos="2 "></span><span class="kd">val</span><span class="w"> </span><span class="nv">mapaMutable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mutableMapOf</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="m">2</span><span class="p">)</span>
+</span><span id="__span-7-3"><span class="linenos" data-linenos="3 "></span>
+</span><span id="__span-7-4"><span class="linenos" data-linenos="4 "></span><span class="n">println</span><span class="p">(</span><span class="n">mapa</span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="p">)</span><span class="w">           </span><span class="c1">// Uno</span>
+</span><span id="__span-7-5"><span class="linenos" data-linenos="5 "></span><span class="n">mapaMutable</span><span class="o">[</span><span class="s">&quot;C&quot;</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span>
+</span></code></pre></div>
+<h2 id="definicion-y-creacion-de-objetos">Definición y creación de objetos<a class="headerlink" href="#definicion-y-creacion-de-objetos" title="Permanent link">&para;</a></h2>
+<p>En Kotlin todo es un objeto. Podemos definir <strong>clases</strong> y crear objetos a partir de ellas.</p>
+<h3 id="declaracion-de-una-clase-simple">Declaración de una clase simple<a class="headerlink" href="#declaracion-de-una-clase-simple" title="Permanent link">&para;</a></h3>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-8-1"><span class="linenos" data-linenos="1 "></span><span class="kd">class</span><span class="w"> </span><span class="nc">Persona</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">edad</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span>
+</span></code></pre></div>
+<ul>
+<li><code>val</code> → propiedad inmutable.  </li>
+<li><code>var</code> → propiedad mutable.  </li>
+</ul>
+<h3 id="crear-un-objeto">Crear un objeto<a class="headerlink" href="#crear-un-objeto" title="Permanent link">&para;</a></h3>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-9-1"><span class="linenos" data-linenos="1 "></span><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-2"><span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">persona1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Persona</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">30</span><span class="p">)</span>
+</span><span id="__span-9-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Nombre: </span><span class="si">${</span><span class="n">persona1</span><span class="p">.</span><span class="na">nombre</span><span class="si">}</span><span class="s">, Edad: </span><span class="si">${</span><span class="n">persona1</span><span class="p">.</span><span class="na">edad</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
+</span><span id="__span-9-4"><span class="linenos" data-linenos="4 "></span>
+</span><span id="__span-9-5"><span class="linenos" data-linenos="5 "></span><span class="w">    </span><span class="n">persona1</span><span class="p">.</span><span class="na">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">31</span>
+</span><span id="__span-9-6"><span class="linenos" data-linenos="6 "></span><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Edad actualizada: </span><span class="si">${</span><span class="n">persona1</span><span class="p">.</span><span class="na">edad</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
+</span><span id="__span-9-7"><span class="linenos" data-linenos="7 "></span><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="metodos-dentro-de-una-clase">Métodos dentro de una clase<a class="headerlink" href="#metodos-dentro-de-una-clase" title="Permanent link">&para;</a></h3>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-10-1"><span class="linenos" data-linenos="1 "></span><span class="kd">class</span><span class="w"> </span><span class="nc">Coche</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">marca</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">velocidad</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-2"><span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">acelerar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-3"><span class="linenos" data-linenos="3 "></span><span class="w">        </span><span class="n">velocidad</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="m">10</span>
+</span><span id="__span-10-4"><span class="linenos" data-linenos="4 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-10-5"><span class="linenos" data-linenos="5 "></span><span class="p">}</span>
+</span></code></pre></div>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-11-1"><span class="linenos" data-linenos="1 "></span><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-2"><span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">miCoche</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Coche</span><span class="p">(</span><span class="s">&quot;Toyota&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">100</span><span class="p">)</span>
+</span><span id="__span-11-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="n">miCoche</span><span class="p">.</span><span class="na">acelerar</span><span class="p">()</span>
+</span><span id="__span-11-4"><span class="linenos" data-linenos="4 "></span><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Velocidad: </span><span class="si">${</span><span class="n">miCoche</span><span class="p">.</span><span class="na">velocidad</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
+</span><span id="__span-11-5"><span class="linenos" data-linenos="5 "></span><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="ejemplo-de-manejo-de-objetos">Ejemplo de manejo de objetos<a class="headerlink" href="#ejemplo-de-manejo-de-objetos" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Clase Persona</label><label for="__tabbed_1_2">Clase Empleado</label><label for="__tabbed_1_3">Clase main</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-12-1"><span class="linenos" data-linenos="1 "></span><span class="kd">class</span><span class="w"> </span><span class="nc">Persona</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">edad</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-2"><span class="linenos" data-linenos="2 "></span>
+</span><span id="__span-12-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">presentarse</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-4"><span class="linenos" data-linenos="4 "></span><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Hola, soy </span><span class="si">$</span><span class="n">nombre</span><span class="s"> y tengo </span><span class="si">$</span><span class="n">edad</span><span class="s"> años.&quot;</span><span class="p">)</span>
+</span><span id="__span-12-5"><span class="linenos" data-linenos="5 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-12-6"><span class="linenos" data-linenos="6 "></span><span class="p">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-13-1"><span class="linenos" data-linenos=" 1 "></span><span class="kd">class</span><span class="w"> </span><span class="nc">Empleado</span><span class="p">(</span><span class="n">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="n">edad</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">puesto</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">salario</span><span class="p">:</span><span class="w"> </span><span class="kt">Double</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-13-2"><span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="n">Persona</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">edad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-3"><span class="linenos" data-linenos=" 3 "></span>
+</span><span id="__span-13-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">trabajar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;</span><span class="si">$</span><span class="n">nombre</span><span class="s"> está trabajando como </span><span class="si">$</span><span class="n">puesto</span><span class="s">.&quot;</span><span class="p">)</span>
+</span><span id="__span-13-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-13-7"><span class="linenos" data-linenos=" 7 "></span>
+</span><span id="__span-13-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">mostrarSalario</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;El salario de </span><span class="si">$</span><span class="n">nombre</span><span class="s"> es </span><span class="si">$</span><span class="n">salario</span><span class="s"> €.&quot;</span><span class="p">)</span>
+</span><span id="__span-13-10"><span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-13-11"><span class="linenos" data-linenos="11 "></span><span class="p">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-14-1"><span class="linenos" data-linenos="1 "></span><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-2"><span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">persona</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Persona</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">28</span><span class="p">)</span>
+</span><span id="__span-14-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="n">persona</span><span class="p">.</span><span class="na">presentarse</span><span class="p">()</span>
+</span><span id="__span-14-4"><span class="linenos" data-linenos="4 "></span>
+</span><span id="__span-14-5"><span class="linenos" data-linenos="5 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">empleado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Empleado</span><span class="p">(</span><span class="s">&quot;Carlos&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">35</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Desarrollador&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">2800.0</span><span class="p">)</span>
+</span><span id="__span-14-6"><span class="linenos" data-linenos="6 "></span><span class="w">    </span><span class="n">empleado</span><span class="p">.</span><span class="na">presentarse</span><span class="p">()</span><span class="w">       </span><span class="c1">// heredado de Persona</span>
+</span><span id="__span-14-7"><span class="linenos" data-linenos="7 "></span><span class="w">    </span><span class="n">empleado</span><span class="p">.</span><span class="na">trabajar</span><span class="p">()</span>
+</span><span id="__span-14-8"><span class="linenos" data-linenos="8 "></span><span class="w">    </span><span class="n">empleado</span><span class="p">.</span><span class="na">mostrarSalario</span><span class="p">()</span>
+</span><span id="__span-14-9"><span class="linenos" data-linenos="9 "></span><span class="p">}</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="class-vs-data-class"><code>class</code> vs <code>data class</code><a class="headerlink" href="#class-vs-data-class" title="Permanent link">&para;</a></h3>
+<p>Si usamos <code>data class</code> en Kotlin, qseue añade automáticamente <code>`toString()</code>, <code>equals()</code>, <code>hashCode()</code> y <code>copy()</code></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Clase Persona</label><label for="__tabbed_2_2">Clase Empleado</label><label for="__tabbed_2_3">Clase main</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-15-1"><span class="linenos" data-linenos="1 "></span><span class="kd">data</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Persona</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">edad</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-15-2"><span class="linenos" data-linenos="2 "></span>
+</span><span id="__span-15-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">presentarse</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-15-4"><span class="linenos" data-linenos="4 "></span><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Hola, soy </span><span class="si">$</span><span class="n">nombre</span><span class="s"> y tengo </span><span class="si">$</span><span class="n">edad</span><span class="s"> años.&quot;</span><span class="p">)</span>
+</span><span id="__span-15-5"><span class="linenos" data-linenos="5 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-15-6"><span class="linenos" data-linenos="6 "></span><span class="p">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-16-1"><span class="linenos" data-linenos=" 1 "></span><span class="kd">data</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Empleado</span><span class="p">(</span>
+</span><span id="__span-16-2"><span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">puesto</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span>
+</span><span id="__span-16-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">salario</span><span class="p">:</span><span class="w"> </span><span class="kt">Double</span><span class="p">,</span>
+</span><span id="__span-16-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">nombreEmpleado</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span>
+</span><span id="__span-16-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">edadEmpleado</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span>
+</span><span id="__span-16-6"><span class="linenos" data-linenos=" 6 "></span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Persona</span><span class="p">(</span><span class="n">nombreEmpleado</span><span class="p">,</span><span class="w"> </span><span class="n">edadEmpleado</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-7"><span class="linenos" data-linenos=" 7 "></span>
+</span><span id="__span-16-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">trabajar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;</span><span class="si">$</span><span class="n">nombreEmpleado</span><span class="s"> está trabajando como </span><span class="si">$</span><span class="n">puesto</span><span class="s">.&quot;</span><span class="p">)</span>
+</span><span id="__span-16-10"><span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-16-11"><span class="linenos" data-linenos="11 "></span>
+</span><span id="__span-16-12"><span class="linenos" data-linenos="12 "></span><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">mostrarSalario</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-13"><span class="linenos" data-linenos="13 "></span><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;El salario de </span><span class="si">$</span><span class="n">nombreEmpleado</span><span class="s"> es </span><span class="si">$</span><span class="n">salario</span><span class="s"> €.&quot;</span><span class="p">)</span>
+</span><span id="__span-16-14"><span class="linenos" data-linenos="14 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-16-15"><span class="linenos" data-linenos="15 "></span><span class="p">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-17-1"><span class="linenos" data-linenos=" 1 "></span><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-17-2"><span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">persona</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Persona</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">28</span><span class="p">)</span>
+</span><span id="__span-17-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="n">persona</span><span class="p">.</span><span class="na">presentarse</span><span class="p">()</span>
+</span><span id="__span-17-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">persona</span><span class="p">.</span><span class="na">toString</span><span class="p">())</span><span class="w">  </span><span class="c1">// generado automáticamente por data class</span>
+</span><span id="__span-17-5"><span class="linenos" data-linenos=" 5 "></span>
+</span><span id="__span-17-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">empleado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Empleado</span><span class="p">(</span><span class="s">&quot;Desarrollador&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">2800.0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Carlos&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">35</span><span class="p">)</span>
+</span><span id="__span-17-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">    </span><span class="n">empleado</span><span class="p">.</span><span class="na">presentarse</span><span class="p">()</span><span class="w">       </span><span class="c1">// heredado de Persona</span>
+</span><span id="__span-17-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="n">empleado</span><span class="p">.</span><span class="na">trabajar</span><span class="p">()</span>
+</span><span id="__span-17-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="n">empleado</span><span class="p">.</span><span class="na">mostrarSalario</span><span class="p">()</span>
+</span><span id="__span-17-10"><span class="linenos" data-linenos="10 "></span>
+</span><span id="__span-17-11"><span class="linenos" data-linenos="11 "></span><span class="w">    </span><span class="c1">// Usando copy() (disponible en data class)</span>
+</span><span id="__span-17-12"><span class="linenos" data-linenos="12 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">empleado2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">empleado</span><span class="p">.</span><span class="na">copy</span><span class="p">(</span><span class="n">salario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3000.0</span><span class="p">)</span>
+</span><span id="__span-17-13"><span class="linenos" data-linenos="13 "></span><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">empleado2</span><span class="p">.</span><span class="na">toString</span><span class="p">())</span>
+</span><span id="__span-17-14"><span class="linenos" data-linenos="14 "></span><span class="p">}</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">A tener en cuenta</p>
+<p>Con data class:</p>
+<ul>
+<li>Menos código repetitivo.</li>
+<li>Métodos útiles (<code>toString()</code>, <code>copy()</code>, <code>equals()</code>) vienen listos.</li>
+<li>Muy recomendable para modelos de datos en apps.</li>
+</ul>
+</div>
+<h2 id="actividades-no-evaluables">Actividades (no evaluables)<a class="headerlink" href="#actividades-no-evaluables" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong><abbr title="Actividades de refuerzo.">AR</abbr> K01</strong>. Crea una clase llamada Producto que tenga como atributos el nombre y el precio. La clase debe permitir:</p>
+<ul>
+<li>Mostrar la información del producto (nombre y precio).</li>
+<li>Aplicar un descuento al precio.</li>
+</ul>
+<p>Tareas:</p>
+<ul>
+<li>Crea varios objetos Producto.</li>
+<li>Aplica descuentos diferentes a cada producto.</li>
+<li>Muestra el precio final después de aplicar el descuento.</li>
+</ul>
+</li>
+<li>
+<p><strong><abbr title="Actividades de refuerzo.">AR</abbr> K02</strong>. Crea una clase base llamada <code>Animal</code> que tenga como atributo el nombre y un método llamado <code>hacerSonido()</code>. Después, crea una clase <code>Perro</code> que herede de <code>Animal</code> y sobrescriba el método <code>hacerSonido()</code>. Además, añade un método propio de la clase <code>Perro</code>.</p>
+<p>Tareas:</p>
+<ul>
+<li>Crea un objeto de tipo <code>Animal</code> y un objeto de tipo <code>Perro</code>.</li>
+<li>Llama al método <code>hacerSonido()</code> en ambos casos y observa la diferencia.</li>
+<li>Añade una nueva clase <code>Gato</code> que también herede de <code>Animal</code> e implemente su propio sonido.</li>
+<li>Crea una lista de animales (perros, gatos, animales genéricos) y recórrela invocando el método <code>hacerSonido()</code> en todos los casos.</li>
+</ul>
+</li>
+</ul>
+<!-- Resultados de Aprendizaje & Criterios de Evaluación -->
+<!-- Instrumentos de Evaluación -->
+<!-- Instrumentos de Calificación -->
+<!-- Tipo de actividades -->
+<!-- Otras abreviaciones -->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="02_ElementosControl.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Estructuras de control">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Estructuras de control
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../ut/ut01/ResumenUT.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Propuesta didáctica UT 01">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Propuesta didáctica UT 01
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2025-2026 Ginés López García
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/gineslopez/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/gines-lopez" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://gines-lopez.github.io" target="_blank" rel="noopener" title="gines-lopez.github.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm32 104c0-13.3 10.7-24 24-24 137 0 248 111 248 248 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-110.5-89.5-200-200-200-13.3 0-24-10.7-24-24m0 96c0-13.3 10.7-24 24-24 83.9 0 152 68.1 152 152 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-57.4-46.6-104-104-104-13.3 0-24-10.7-24-24m0 120a32 32 0 1 1 64 0 32 32 0 1 1-64 0"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/ginesenclase" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M357.2 48h70.6L273.6 224.2 455 464H313L201.7 318.6 74.5 464H3.8l164.9-188.5L-5.2 48h145.6l100.5 132.9zm-24.8 373.8h39.1L119.1 88h-42z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<g.lopezgarcia2@edu.gva.es>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "toc.integrate", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.footer", "toc.follow", "content.tooltips", "content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
