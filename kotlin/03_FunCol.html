@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://github.com/gines-lopez/PMDM/kotlin/03_FunPOOCol.html">
+        <link rel="canonical" href="https://github.com/gines-lopez/PMDM/kotlin/03_FunCol.html">
       
       
         <link rel="prev" href="02_ElementosControl.html">
       
       
-        <link rel="next" href="../ut/ut01/ResumenUT.html">
+        <link rel="next" href="04_POO.html">
       
       
       <link rel="icon" href="../img/favicon.ico">
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#funciones-colecciones-y-objetos" class="md-skip">
+        <a href="#funciones-y-colecciones" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -283,6 +283,8 @@
       
         
       
+        
+      
     
     
     
@@ -412,7 +414,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="03_FunPOOCol.html" class="md-nav__link md-nav__link--active">
+      <a href="03_FunCol.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -541,79 +543,33 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#definicion-y-creacion-de-objetos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Definición y creación de objetos
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Definición y creación de objetos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#declaracion-de-una-clase-simple" class="md-nav__link">
-    <span class="md-ellipsis">
-      Declaración de una clase simple
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#crear-un-objeto" class="md-nav__link">
-    <span class="md-ellipsis">
-      Crear un objeto
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#metodos-dentro-de-una-clase" class="md-nav__link">
-    <span class="md-ellipsis">
-      Métodos dentro de una clase
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-de-manejo-de-objetos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejemplo de manejo de objetos
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#class-vs-data-class" class="md-nav__link">
-    <span class="md-ellipsis">
-      class vs data class
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#actividades-no-evaluables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Actividades (no evaluables)
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04_POO.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    POO
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -889,7 +845,7 @@
 
 
 
-<h1 id="funciones-colecciones-y-objetos">Funciones, Colecciones y Objetos<a class="headerlink" href="#funciones-colecciones-y-objetos" title="Permanent link">&para;</a></h1>
+<h1 id="funciones-y-colecciones">Funciones y colecciones<a class="headerlink" href="#funciones-y-colecciones" title="Permanent link">&para;</a></h1>
 <h2 id="definicion-de-funciones">Definición de funciones<a class="headerlink" href="#definicion-de-funciones" title="Permanent link">&para;</a></h2>
 <p>En Kotlin, una <strong>función</strong> es un bloque de código reutilizable que puede recibir parámetros y devolver un valor.</p>
 <h3 id="sintaxis-basica">Sintaxis básica<a class="headerlink" href="#sintaxis-basica" title="Permanent link">&para;</a></h3>
@@ -966,162 +922,6 @@
 </span><span id="__span-7-4"><span class="linenos" data-linenos="4 "></span><span class="n">println</span><span class="p">(</span><span class="n">mapa</span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="p">)</span><span class="w">           </span><span class="c1">// Uno</span>
 </span><span id="__span-7-5"><span class="linenos" data-linenos="5 "></span><span class="n">mapaMutable</span><span class="o">[</span><span class="s">&quot;C&quot;</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span>
 </span></code></pre></div>
-<h2 id="definicion-y-creacion-de-objetos">Definición y creación de objetos<a class="headerlink" href="#definicion-y-creacion-de-objetos" title="Permanent link">&para;</a></h2>
-<p>En Kotlin todo es un objeto. Podemos definir <strong>clases</strong> y crear objetos a partir de ellas.</p>
-<h3 id="declaracion-de-una-clase-simple">Declaración de una clase simple<a class="headerlink" href="#declaracion-de-una-clase-simple" title="Permanent link">&para;</a></h3>
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-8-1"><span class="linenos" data-linenos="1 "></span><span class="kd">class</span><span class="w"> </span><span class="nc">Persona</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">edad</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span>
-</span></code></pre></div>
-<ul>
-<li><code>val</code> → propiedad inmutable.  </li>
-<li><code>var</code> → propiedad mutable.  </li>
-</ul>
-<h3 id="crear-un-objeto">Crear un objeto<a class="headerlink" href="#crear-un-objeto" title="Permanent link">&para;</a></h3>
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-9-1"><span class="linenos" data-linenos="1 "></span><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-9-2"><span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">persona1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Persona</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">30</span><span class="p">)</span>
-</span><span id="__span-9-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Nombre: </span><span class="si">${</span><span class="n">persona1</span><span class="p">.</span><span class="na">nombre</span><span class="si">}</span><span class="s">, Edad: </span><span class="si">${</span><span class="n">persona1</span><span class="p">.</span><span class="na">edad</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
-</span><span id="__span-9-4"><span class="linenos" data-linenos="4 "></span>
-</span><span id="__span-9-5"><span class="linenos" data-linenos="5 "></span><span class="w">    </span><span class="n">persona1</span><span class="p">.</span><span class="na">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">31</span>
-</span><span id="__span-9-6"><span class="linenos" data-linenos="6 "></span><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Edad actualizada: </span><span class="si">${</span><span class="n">persona1</span><span class="p">.</span><span class="na">edad</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
-</span><span id="__span-9-7"><span class="linenos" data-linenos="7 "></span><span class="p">}</span>
-</span></code></pre></div>
-<h3 id="metodos-dentro-de-una-clase">Métodos dentro de una clase<a class="headerlink" href="#metodos-dentro-de-una-clase" title="Permanent link">&para;</a></h3>
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-10-1"><span class="linenos" data-linenos="1 "></span><span class="kd">class</span><span class="w"> </span><span class="nc">Coche</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">marca</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">velocidad</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-10-2"><span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">acelerar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-10-3"><span class="linenos" data-linenos="3 "></span><span class="w">        </span><span class="n">velocidad</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="m">10</span>
-</span><span id="__span-10-4"><span class="linenos" data-linenos="4 "></span><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-10-5"><span class="linenos" data-linenos="5 "></span><span class="p">}</span>
-</span></code></pre></div>
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-11-1"><span class="linenos" data-linenos="1 "></span><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-11-2"><span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">miCoche</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Coche</span><span class="p">(</span><span class="s">&quot;Toyota&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">100</span><span class="p">)</span>
-</span><span id="__span-11-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="n">miCoche</span><span class="p">.</span><span class="na">acelerar</span><span class="p">()</span>
-</span><span id="__span-11-4"><span class="linenos" data-linenos="4 "></span><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Velocidad: </span><span class="si">${</span><span class="n">miCoche</span><span class="p">.</span><span class="na">velocidad</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
-</span><span id="__span-11-5"><span class="linenos" data-linenos="5 "></span><span class="p">}</span>
-</span></code></pre></div>
-<h3 id="ejemplo-de-manejo-de-objetos">Ejemplo de manejo de objetos<a class="headerlink" href="#ejemplo-de-manejo-de-objetos" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Clase Persona</label><label for="__tabbed_1_2">Clase Empleado</label><label for="__tabbed_1_3">Clase main</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-12-1"><span class="linenos" data-linenos="1 "></span><span class="kd">class</span><span class="w"> </span><span class="nc">Persona</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">edad</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-12-2"><span class="linenos" data-linenos="2 "></span>
-</span><span id="__span-12-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">presentarse</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-12-4"><span class="linenos" data-linenos="4 "></span><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Hola, soy </span><span class="si">$</span><span class="n">nombre</span><span class="s"> y tengo </span><span class="si">$</span><span class="n">edad</span><span class="s"> años.&quot;</span><span class="p">)</span>
-</span><span id="__span-12-5"><span class="linenos" data-linenos="5 "></span><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-12-6"><span class="linenos" data-linenos="6 "></span><span class="p">}</span>
-</span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-13-1"><span class="linenos" data-linenos=" 1 "></span><span class="kd">class</span><span class="w"> </span><span class="nc">Empleado</span><span class="p">(</span><span class="n">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="n">edad</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">puesto</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">salario</span><span class="p">:</span><span class="w"> </span><span class="kt">Double</span><span class="p">)</span><span class="w"> </span>
-</span><span id="__span-13-2"><span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="p">:</span><span class="w"> </span><span class="n">Persona</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">edad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-13-3"><span class="linenos" data-linenos=" 3 "></span>
-</span><span id="__span-13-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">trabajar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-13-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;</span><span class="si">$</span><span class="n">nombre</span><span class="s"> está trabajando como </span><span class="si">$</span><span class="n">puesto</span><span class="s">.&quot;</span><span class="p">)</span>
-</span><span id="__span-13-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-13-7"><span class="linenos" data-linenos=" 7 "></span>
-</span><span id="__span-13-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">mostrarSalario</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-13-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;El salario de </span><span class="si">$</span><span class="n">nombre</span><span class="s"> es </span><span class="si">$</span><span class="n">salario</span><span class="s"> €.&quot;</span><span class="p">)</span>
-</span><span id="__span-13-10"><span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-13-11"><span class="linenos" data-linenos="11 "></span><span class="p">}</span>
-</span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-14-1"><span class="linenos" data-linenos="1 "></span><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-14-2"><span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">persona</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Persona</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">28</span><span class="p">)</span>
-</span><span id="__span-14-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="n">persona</span><span class="p">.</span><span class="na">presentarse</span><span class="p">()</span>
-</span><span id="__span-14-4"><span class="linenos" data-linenos="4 "></span>
-</span><span id="__span-14-5"><span class="linenos" data-linenos="5 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">empleado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Empleado</span><span class="p">(</span><span class="s">&quot;Carlos&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">35</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Desarrollador&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">2800.0</span><span class="p">)</span>
-</span><span id="__span-14-6"><span class="linenos" data-linenos="6 "></span><span class="w">    </span><span class="n">empleado</span><span class="p">.</span><span class="na">presentarse</span><span class="p">()</span><span class="w">       </span><span class="c1">// heredado de Persona</span>
-</span><span id="__span-14-7"><span class="linenos" data-linenos="7 "></span><span class="w">    </span><span class="n">empleado</span><span class="p">.</span><span class="na">trabajar</span><span class="p">()</span>
-</span><span id="__span-14-8"><span class="linenos" data-linenos="8 "></span><span class="w">    </span><span class="n">empleado</span><span class="p">.</span><span class="na">mostrarSalario</span><span class="p">()</span>
-</span><span id="__span-14-9"><span class="linenos" data-linenos="9 "></span><span class="p">}</span>
-</span></code></pre></div>
-</div>
-</div>
-</div>
-<h3 id="class-vs-data-class"><code>class</code> vs <code>data class</code><a class="headerlink" href="#class-vs-data-class" title="Permanent link">&para;</a></h3>
-<p>Si usamos <code>data class</code> en Kotlin, qseue añade automáticamente <code>`toString()</code>, <code>equals()</code>, <code>hashCode()</code> y <code>copy()</code></p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Clase Persona</label><label for="__tabbed_2_2">Clase Empleado</label><label for="__tabbed_2_3">Clase main</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-15-1"><span class="linenos" data-linenos="1 "></span><span class="kd">data</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Persona</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">var</span><span class="w"> </span><span class="nv">edad</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-15-2"><span class="linenos" data-linenos="2 "></span>
-</span><span id="__span-15-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">presentarse</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-15-4"><span class="linenos" data-linenos="4 "></span><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Hola, soy </span><span class="si">$</span><span class="n">nombre</span><span class="s"> y tengo </span><span class="si">$</span><span class="n">edad</span><span class="s"> años.&quot;</span><span class="p">)</span>
-</span><span id="__span-15-5"><span class="linenos" data-linenos="5 "></span><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-15-6"><span class="linenos" data-linenos="6 "></span><span class="p">}</span>
-</span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-16-1"><span class="linenos" data-linenos=" 1 "></span><span class="kd">data</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Empleado</span><span class="p">(</span>
-</span><span id="__span-16-2"><span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">puesto</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span>
-</span><span id="__span-16-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">salario</span><span class="p">:</span><span class="w"> </span><span class="kt">Double</span><span class="p">,</span>
-</span><span id="__span-16-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">nombreEmpleado</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span>
-</span><span id="__span-16-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">edadEmpleado</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span>
-</span><span id="__span-16-6"><span class="linenos" data-linenos=" 6 "></span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Persona</span><span class="p">(</span><span class="n">nombreEmpleado</span><span class="p">,</span><span class="w"> </span><span class="n">edadEmpleado</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-16-7"><span class="linenos" data-linenos=" 7 "></span>
-</span><span id="__span-16-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">trabajar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-16-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;</span><span class="si">$</span><span class="n">nombreEmpleado</span><span class="s"> está trabajando como </span><span class="si">$</span><span class="n">puesto</span><span class="s">.&quot;</span><span class="p">)</span>
-</span><span id="__span-16-10"><span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-16-11"><span class="linenos" data-linenos="11 "></span>
-</span><span id="__span-16-12"><span class="linenos" data-linenos="12 "></span><span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">mostrarSalario</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-16-13"><span class="linenos" data-linenos="13 "></span><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;El salario de </span><span class="si">$</span><span class="n">nombreEmpleado</span><span class="s"> es </span><span class="si">$</span><span class="n">salario</span><span class="s"> €.&quot;</span><span class="p">)</span>
-</span><span id="__span-16-14"><span class="linenos" data-linenos="14 "></span><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-16-15"><span class="linenos" data-linenos="15 "></span><span class="p">}</span>
-</span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-17-1"><span class="linenos" data-linenos=" 1 "></span><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-17-2"><span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">persona</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Persona</span><span class="p">(</span><span class="s">&quot;Ana&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">28</span><span class="p">)</span>
-</span><span id="__span-17-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="n">persona</span><span class="p">.</span><span class="na">presentarse</span><span class="p">()</span>
-</span><span id="__span-17-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">persona</span><span class="p">.</span><span class="na">toString</span><span class="p">())</span><span class="w">  </span><span class="c1">// generado automáticamente por data class</span>
-</span><span id="__span-17-5"><span class="linenos" data-linenos=" 5 "></span>
-</span><span id="__span-17-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">empleado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Empleado</span><span class="p">(</span><span class="s">&quot;Desarrollador&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">2800.0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Carlos&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">35</span><span class="p">)</span>
-</span><span id="__span-17-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">    </span><span class="n">empleado</span><span class="p">.</span><span class="na">presentarse</span><span class="p">()</span><span class="w">       </span><span class="c1">// heredado de Persona</span>
-</span><span id="__span-17-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="n">empleado</span><span class="p">.</span><span class="na">trabajar</span><span class="p">()</span>
-</span><span id="__span-17-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="n">empleado</span><span class="p">.</span><span class="na">mostrarSalario</span><span class="p">()</span>
-</span><span id="__span-17-10"><span class="linenos" data-linenos="10 "></span>
-</span><span id="__span-17-11"><span class="linenos" data-linenos="11 "></span><span class="w">    </span><span class="c1">// Usando copy() (disponible en data class)</span>
-</span><span id="__span-17-12"><span class="linenos" data-linenos="12 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">empleado2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">empleado</span><span class="p">.</span><span class="na">copy</span><span class="p">(</span><span class="n">salario</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3000.0</span><span class="p">)</span>
-</span><span id="__span-17-13"><span class="linenos" data-linenos="13 "></span><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="n">empleado2</span><span class="p">.</span><span class="na">toString</span><span class="p">())</span>
-</span><span id="__span-17-14"><span class="linenos" data-linenos="14 "></span><span class="p">}</span>
-</span></code></pre></div>
-</div>
-</div>
-</div>
-<div class="admonition info">
-<p class="admonition-title">A tener en cuenta</p>
-<p>Con data class:</p>
-<ul>
-<li>Menos código repetitivo.</li>
-<li>Métodos útiles (<code>toString()</code>, <code>copy()</code>, <code>equals()</code>) vienen listos.</li>
-<li>Muy recomendable para modelos de datos en apps.</li>
-</ul>
-</div>
-<h2 id="actividades-no-evaluables">Actividades (no evaluables)<a class="headerlink" href="#actividades-no-evaluables" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p><strong><abbr title="Actividades de refuerzo.">AR</abbr> K01</strong>. Crea una clase llamada Producto que tenga como atributos el nombre y el precio. La clase debe permitir:</p>
-<ul>
-<li>Mostrar la información del producto (nombre y precio).</li>
-<li>Aplicar un descuento al precio.</li>
-</ul>
-<p>Tareas:</p>
-<ul>
-<li>Crea varios objetos Producto.</li>
-<li>Aplica descuentos diferentes a cada producto.</li>
-<li>Muestra el precio final después de aplicar el descuento.</li>
-</ul>
-</li>
-<li>
-<p><strong><abbr title="Actividades de refuerzo.">AR</abbr> K02</strong>. Crea una clase base llamada <code>Animal</code> que tenga como atributo el nombre y un método llamado <code>hacerSonido()</code>. Después, crea una clase <code>Perro</code> que herede de <code>Animal</code> y sobrescriba el método <code>hacerSonido()</code>. Además, añade un método propio de la clase <code>Perro</code>.</p>
-<p>Tareas:</p>
-<ul>
-<li>Crea un objeto de tipo <code>Animal</code> y un objeto de tipo <code>Perro</code>.</li>
-<li>Llama al método <code>hacerSonido()</code> en ambos casos y observa la diferencia.</li>
-<li>Añade una nueva clase <code>Gato</code> que también herede de <code>Animal</code> e implemente su propio sonido.</li>
-<li>Crea una lista de animales (perros, gatos, animales genéricos) y recórrela invocando el método <code>hacerSonido()</code> en todos los casos.</li>
-</ul>
-</li>
-</ul>
 <!-- Resultados de Aprendizaje & Criterios de Evaluación -->
 <!-- Instrumentos de Evaluación -->
 <!-- Instrumentos de Calificación -->
@@ -1179,13 +979,13 @@
         
         
           
-          <a href="../ut/ut01/ResumenUT.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Propuesta didáctica UT 01">
+          <a href="04_POO.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: POO">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Siguiente
               </span>
               <div class="md-ellipsis">
-                Propuesta didáctica UT 01
+                POO
               </div>
             </div>
             <div class="md-footer__button md-icon">
