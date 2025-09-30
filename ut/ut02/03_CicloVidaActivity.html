@@ -1381,12 +1381,14 @@ Ejemplo: abrir la app de correo desde la pantalla principal, o iniciar la cámar
 <li>Ejemplo: elegir un contacto y devolverlo a la Activity que lo pidió.  </li>
 <li>El resultado se recibe en <code>onActivityResult(requestCode, resultCode, data)</code>.  </li>
 </ul>
-<h4 id="codigos-de-resultado">Códigos de resultado<a class="headerlink" href="#codigos-de-resultado" title="Permanent link">&para;</a></h4>
+<div class="admonition info">
+<p class="admonition-title">Códigos de resultado</p>
 <ul>
 <li><code>RESULT_OK</code> → todo correcto.  </li>
 <li><code>RESULT_CANCELED</code> → cancelado o error.  </li>
 <li><code>RESULT_FIRST_USER</code> → códigos personalizados.</li>
 </ul>
+</div>
 <h3 id="coordinacion-entre-activities">Coordinación entre Activities<a class="headerlink" href="#coordinacion-entre-activities" title="Permanent link">&para;</a></h3>
 <p>Cuando una Activity inicia otra, ambas experimentan <strong>transiciones de ciclo de vida</strong>:</p>
 <ol>
