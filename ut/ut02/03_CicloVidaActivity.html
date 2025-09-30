@@ -1367,19 +1367,21 @@
 Ejemplo: abrir la app de correo desde la pantalla principal, o iniciar la cámara desde una app de chat.</p>
 <h2 id="como-iniciar-una-activity-desde-otra">Cómo iniciar una Activity desde otra<a class="headerlink" href="#como-iniciar-una-activity-desde-otra" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>startActivity(Intent)</strong>  </li>
-<li>Inicia otra Activity sin esperar resultado.  </li>
 <li>
-<p>Puede ser de la misma app o de otra (ej. abrir un email, compartir un archivo).  </p>
+<p><strong>startActivity(Intent)</strong>  </p>
+<ul>
+<li>Inicia otra Activity sin esperar resultado.  </li>
+<li>Puede ser de la misma app o de otra (ej. abrir un email, compartir un archivo).  </li>
+</ul>
 </li>
 <li>
 <p><strong>startActivityForResult(Intent, int)</strong>  </p>
-</li>
-<li>
-<p>Inicia otra Activity esperando un <strong>resultado</strong>.  </p>
-</li>
+<ul>
+<li>Inicia otra Activity esperando un <strong>resultado</strong>.  </li>
 <li>Ejemplo: elegir un contacto y devolverlo a la Activity que lo pidió.  </li>
 <li>El resultado se recibe en <code>onActivityResult(requestCode, resultCode, data)</code>.  </li>
+</ul>
+</li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Códigos de resultado</p>
@@ -1391,11 +1393,16 @@ Ejemplo: abrir la app de correo desde la pantalla principal, o iniciar la cámar
 </div>
 <h3 id="coordinacion-entre-activities">Coordinación entre Activities<a class="headerlink" href="#coordinacion-entre-activities" title="Permanent link">&para;</a></h3>
 <p>Cuando una Activity inicia otra, ambas experimentan <strong>transiciones de ciclo de vida</strong>:</p>
-<ol>
-<li><code>onPause()</code> de la Activity A (la que inicia).  </li>
-<li><code>onCreate()</code>, <code>onStart()</code>, <code>onResume()</code> de la Activity B (la nueva).  </li>
-<li>Si A deja de ser visible, se ejecuta <code>onStop()</code> en la Activity A.  </li>
-</ol>
+<pre class="mermaid"><code>sequenceDiagram
+    participant A as Activity A
+    participant B as Activity B
+
+    A-&gt;&gt;B: onPause()
+    Note over B: Válido para casos onCreate(), onStart(), onResume()
+    B-&gt;&gt;B: onCreate()
+    Note over B: B ahora está en primer plano
+    B-&gt;&gt;A: onStop()
+    Note over B: B sigue estando en primer plano</code></pre>
 <div class="admonition info">
 <p class="admonition-title">A tener en cuenta</p>
 <p>Así, la <strong>primera Activity no se detiene por completo hasta que la segunda esté lista</strong>.  Esto permite coordinar datos y transiciones de forma predecible.</p>
