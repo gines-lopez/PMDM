@@ -1326,8 +1326,8 @@
 </ul>
 <div class="admonition danger">
 <p class="admonition-title">El problema</p>
-</div>
 <p>El sistema <strong>finaliza la Activity</strong> por defecto en estas situaciones, y se pierde el estado de la interfaz.</p>
+</div>
 <h3 id="estrategias-para-conservar-el-estado">Estrategias para conservar el estado<a class="headerlink" href="#estrategias-para-conservar-el-estado" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
@@ -1355,8 +1355,8 @@
 </ul>
 <div class="admonition danger">
 <p class="admonition-title">Importante</p>
-</div>
 <p>Un <code>Bundle</code> no es adecuado para grandes cantidades de datos (consume memoria y requiere serialización en el hilo principal).</p>
+</div>
 <h3 id="estado-de-la-instancia">Estado de la instancia<a class="headerlink" href="#estado-de-la-instancia" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Si la Activity se <strong>cierra voluntariamente</strong> (<code>finish()</code> o botón Atrás) → el estado se pierde y <strong>no se restaura</strong>.  </li>
@@ -1395,9 +1395,9 @@ Ejemplo: abrir la app de correo desde la pantalla principal, o iniciar la cámar
 <li>Si A deja de ser visible, se ejecuta <code>onStop()</code> en la Activity A.  </li>
 </ol>
 <div class="admonition info">
-<p class="admonition-title">Info</p>
-</div>
+<p class="admonition-title">A tener en cuenta</p>
 <p>Así, la <strong>primera Activity no se detiene por completo hasta que la segunda esté lista</strong>.  Esto permite coordinar datos y transiciones de forma predecible.</p>
+</div>
 <h2 id="actividades">Actividades<a class="headerlink" href="#actividades" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
