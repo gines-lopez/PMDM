@@ -90,6 +90,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#adaptando-los-disenos-a-diferentes-configuraciones" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -889,6 +894,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    06. Adaptando configuraciones
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="06_DiferentesConfiguraciones.html" class="md-nav__link md-nav__link--active">
         
@@ -901,6 +921,100 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#interfaces-independientes-de-densidad-y-resolucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interfaces independientes de densidad y resolución
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interfaces independientes de densidad y resolución">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unidades-de-medida-recomendadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unidades de medida recomendadas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graficos-y-recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gráficos y recursos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cambios-en-la-configuracion-de-la-interfaz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cambios en la configuración de la interfaz
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cambios en la configuración de la interfaz">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mecanismo-de-android-recreacion-de-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mecanismo de Android: recreación de Activity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-verificar-el-estado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cómo verificar el estado
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrategias-para-preservar-el-estado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrategias para preservar el estado
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -976,9 +1090,123 @@
 
 
 
-  <h1>06. Adaptando configuraciones</h1>
-
-
+<h1 id="adaptando-los-disenos-a-diferentes-configuraciones">Adaptando los diseños a diferentes configuraciones<a class="headerlink" href="#adaptando-los-disenos-a-diferentes-configuraciones" title="Permanent link">&para;</a></h1>
+<h2 id="interfaces-independientes-de-densidad-y-resolucion">Interfaces independientes de densidad y resolución<a class="headerlink" href="#interfaces-independientes-de-densidad-y-resolucion" title="Permanent link">&para;</a></h2>
+<p>Los dispositivos Android varían en:
+- <strong>Tamaño de pantalla</strong> (móvil, tablet, TV, plegables…).<br />
+- <strong>Densidad de píxeles</strong> (ej. 160 dpi vs. 480 dpi en el mismo espacio físico).  </p>
+<div class="admonition danger">
+<p class="admonition-title">Atención</p>
+<div class="language-text highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>Si usas **píxeles absolutos (px)** en tus diseños, la IU se verá **distorsionada o borrosa**.
+</code></pre></div>
+</div>
+<h3 id="unidades-de-medida-recomendadas">Unidades de medida recomendadas<a class="headerlink" href="#unidades-de-medida-recomendadas" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>dp (density-independent pixels)</strong> → para medidas de diseño (márgenes, paddings, tamaños).</p>
+<ul>
+<li>1 dp ≈ 1 px en pantalla de 160 dpi (densidad base).  </li>
+<li>Conversión: <code>px = dp * (dpi / 160)</code>  </li>
+</ul>
+</li>
+<li>
+<p><strong>sp (scale-independent pixels)</strong> → para tamaños de texto.  </p>
+<ul>
+<li>Igual que dp, pero además respeta el ajuste de tamaño de fuente elegido por el usuario.  </li>
+</ul>
+</li>
+</ul>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><span class="linenos" data-linenos=" 1 "></span><span class="cm">&lt;!-- Correcto: usar dp para márgenes --&gt;</span>
+</span><span id="__span-0-2"><span class="linenos" data-linenos=" 2 "></span><span class="nt">&lt;LinearLayout</span>
+</span><span id="__span-0-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="na">android:layout_width=</span><span class="s">&quot;match_parent&quot;</span>
+</span><span id="__span-0-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+</span><span id="__span-0-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="na">android:layout_margin=</span><span class="s">&quot;16dp&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+</span><span id="__span-0-6"><span class="linenos" data-linenos=" 6 "></span>
+</span><span id="__span-0-7"><span class="linenos" data-linenos=" 7 "></span><span class="cm">&lt;!-- Correcto: usar sp para texto --&gt;</span>
+</span><span id="__span-0-8"><span class="linenos" data-linenos=" 8 "></span><span class="nt">&lt;TextView</span>
+</span><span id="__span-0-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="na">android:layout_width=</span><span class="s">&quot;wrap_content&quot;</span>
+</span><span id="__span-0-10"><span class="linenos" data-linenos="10 "></span><span class="w">    </span><span class="na">android:layout_height=</span><span class="s">&quot;wrap_content&quot;</span>
+</span><span id="__span-0-11"><span class="linenos" data-linenos="11 "></span><span class="w">    </span><span class="na">android:textSize=</span><span class="s">&quot;18sp&quot;</span>
+</span><span id="__span-0-12"><span class="linenos" data-linenos="12 "></span><span class="w">    </span><span class="na">android:text=</span><span class="s">&quot;Hola mundo&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+</span></code></pre></div>
+<h2 id="graficos-y-recursos">Gráficos y recursos<a class="headerlink" href="#graficos-y-recursos" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Evita múltiples versiones de imágenes en diferentes densidades.  </li>
+<li>
+<p>Usa <strong>gráficos vectoriales</strong> (<code>VectorDrawable</code> en XML):</p>
+<ul>
+<li>Escalan sin perder calidad.  </li>
+<li>Ideales para <strong>iconos</strong> e ilustraciones simples.  </li>
+<li>No recomendados para <strong>fotos</strong>.  </li>
+</ul>
+</li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">Sin soporte</p>
+<p>Android no soporta directamente <strong>SVG</strong> → hay que convertirlos a <strong>VectorDrawable</strong>.</p>
+</div>
+<h2 id="cambios-en-la-configuracion-de-la-interfaz">Cambios en la configuración de la interfaz<a class="headerlink" href="#cambios-en-la-configuracion-de-la-interfaz" title="Permanent link">&para;</a></h2>
+<p>La <abbr title="Interfaz de usuario">IU</abbr> puede verse afectada por cambios en la <strong>configuración del dispositivo</strong>:</p>
+<div class="language-text highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>- Orientación (horizontal/vertical).  
+<span class="linenos" data-linenos="2 "></span>- Modo multiventana o ventana libre.  
+<span class="linenos" data-linenos="3 "></span>- Tamaño/grosor de fuente.  
+<span class="linenos" data-linenos="4 "></span>- Configuración regional (idioma).  
+<span class="linenos" data-linenos="5 "></span>- Tema oscuro/claro.  
+<span class="linenos" data-linenos="6 "></span>- Tamaño de visualización.  
+<span class="linenos" data-linenos="7 "></span>- Teclado conectado/desconectado.  
+<span class="linenos" data-linenos="8 "></span>- Dispositivos plegables.
+</code></pre></div>
+<h3 id="mecanismo-de-android-recreacion-de-activity">Mecanismo de Android: recreación de Activity<a class="headerlink" href="#mecanismo-de-android-recreacion-de-activity" title="Permanent link">&para;</a></h3>
+<p>Cuando ocurre un cambio de configuración, el sistema:</p>
+<ol>
+<li>Llama a <code>onDestroy()</code> y destruye la Activity.  </li>
+<li>Crea una <strong>nueva instancia</strong> (<code>onCreate()</code>), con la configuración actualizada.  </li>
+<li>Vuelve a cargar la UI con recursos alternativos adecuados.  </li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>El estado del usuario debe <strong>mantenerse</strong> para evitar experiencias frustrantes (ej. perder un formulario al rotar el móvil).</p>
+</div>
+<h3 id="como-verificar-el-estado">Cómo verificar el estado<a class="headerlink" href="#como-verificar-el-estado" title="Permanent link">&para;</a></h3>
+<p>Para probar que tu app conserva el estado, fuerza cambios de configuración:</p>
+<ul>
+<li>Rotar el dispositivo.  </li>
+<li>Entrar en modo multiventana.  </li>
+<li>Cambiar tema claro/oscuro.  </li>
+<li>Cambiar idioma o tamaño de fuente.  </li>
+<li>Conectar/desconectar teclado externo.  </li>
+</ul>
+<h2 id="estrategias-para-preservar-el-estado">Estrategias para preservar el estado<a class="headerlink" href="#estrategias-para-preservar-el-estado" title="Permanent link">&para;</a></h2>
+<p>Según el tipo de datos que quieras conservar, hay tres enfoques:</p>
+<ol>
+<li>
+<p><strong>Persistencia local</strong> → para datos grandes o permanentes.  </p>
+<ul>
+<li>Ej.: base de datos, <code>DataStore</code>, ficheros locales.  </li>
+</ul>
+</li>
+<li>
+<p><strong>Objetos retenidos en memoria</strong> → para estado de UI mientras la app está activa.  </p>
+<ul>
+<li>Ej.: <code>ViewModel</code>.  </li>
+</ul>
+</li>
+<li>
+<p><strong>Estado de instancia guardada</strong> → para datos <strong>transitorios</strong> que deben sobrevivir a recreaciones.  </p>
+<ul>
+<li>Ej.: <code>onSaveInstanceState(Bundle)</code> para entradas del usuario, navegación, etc.  </li>
+</ul>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">No te agobies</p>
+<p>A lo largo del curso iremos haciendo uso de estas estrategias, de momento que te suenen.</p>
+</div>
+<!-- Resultados de Aprendizaje & Criterios de Evaluación -->
+<!-- Instrumentos de Evaluación -->
+<!-- Instrumentos de Calificación -->
+<!-- Tipo de actividades -->
+<!-- Otras abreviaciones -->
 
 
 
