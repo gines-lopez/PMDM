@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
     
     
       
@@ -87,6 +87,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#controles-basicos-de-android" class="md-skip">
+          Saltar a contenido
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -933,6 +938,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    08. Controles básicos
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="08_ControlesBasicos.html" class="md-nav__link md-nav__link--active">
         
@@ -945,6 +965,106 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#textview" class="md-nav__link">
+    <span class="md-ellipsis">
+      TextView
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edittext" class="md-nav__link">
+    <span class="md-ellipsis">
+      EditText
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checkbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      CheckBox
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#radiobutton" class="md-nav__link">
+    <span class="md-ellipsis">
+      RadioButton
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#button" class="md-nav__link">
+    <span class="md-ellipsis">
+      Button
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#togglebutton" class="md-nav__link">
+    <span class="md-ellipsis">
+      ToggleButton
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#imagebutton" class="md-nav__link">
+    <span class="md-ellipsis">
+      ImageButton
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#imageview" class="md-nav__link">
+    <span class="md-ellipsis">
+      ImageView
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actividades
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -974,9 +1094,66 @@
 
 
 
-  <h1>08. Controles básicos</h1>
-
-
+<h1 id="controles-basicos-de-android">Controles básicos de Android<a class="headerlink" href="#controles-basicos-de-android" title="Permanent link">&para;</a></h1>
+<p>En el <a href="05_ElementosBasicos.html">apartado anterior</a> hemos visto algunos de los elementos presentes en las interfaces de usuario, pero es importante detenernos en los <strong>controles básicos</strong> que ofrece Android. Estos componentes nos permiten <strong>diseñar aplicaciones simples de manera rápida y funcional</strong>, y constituyen la base de la mayoría de <a href="04_DisenyoIU.html">interfaces gráficas</a>.  </p>
+<p>Dentro de este grupo se encuentran los controles <strong>TextView, EditText, CheckBox, RadioButton, Button, ToggleButton, ImageButton e ImageView</strong>. A continuación se describen brevemente sus características principales y los parámetros más importantes para cada uno.</p>
+<h2 id="textview">TextView<a class="headerlink" href="#textview" title="Permanent link">&para;</a></h2>
+<p>El control <strong>TextView</strong> es uno de los más utilizados y también uno de los más sencillos. Su función principal es <strong>mostrar texto en pantalla</strong>, sin que el usuario pueda modificarlo.</p>
+<p>Algunos de sus atributos más comunes son: </p>
+<ul>
+<li><code>android:text</code> permite establecer el texto que se mostrará.  </li>
+<li><code>android:background</code> define el color de fondo del texto.  </li>
+<li><code>android:textColor</code> cambia el color del texto (en formato hexadecimal).  </li>
+<li><code>android:textSize</code> define el tamaño del texto. Se recomienda usar la unidad <strong>sp</strong>.  </li>
+<li><code>android:textStyle</code> permite establecer el estilo (negrita <code>bold</code> o cursiva <code>italic</code>).  </li>
+</ul>
+<p>En el código, se puede cambiar el texto mediante el método <code>setText()</code>.</p>
+<h2 id="edittext">EditText<a class="headerlink" href="#edittext" title="Permanent link">&para;</a></h2>
+<p>El control <strong>EditText</strong> es una <strong>caja de texto editable</strong>, utilizada para introducir datos por teclado. Se puede recuperar el texto introducido mediante el método <code>getText()</code> y establecer contenido con <code>setText()</code>.</p>
+<p>Entre sus atributos más útiles destacan:  </p>
+<ul>
+<li><code>android:text</code> permite definir un texto inicial.  </li>
+<li><code>android:hint</code> muestra un texto semitransparente (una “pista”) dentro de la caja, el cual desaparece al hacer clic sobre ella.</li>
+</ul>
+<p>Este componente resulta esencial para capturar datos del usuario, como nombres, correos o contraseñas.</p>
+<h2 id="checkbox">CheckBox<a class="headerlink" href="#checkbox" title="Permanent link">&para;</a></h2>
+<p>El componente <strong>CheckBox</strong> representa una <strong>casilla de verificación</strong>, con dos estados posibles: <strong>marcado</strong> (<code>true</code>) o <strong>desmarcado</strong> (<code>false</code>).<br />
+Se usa principalmente para indicar la selección o deselección de una opción. En el código, el estado puede comprobarse mediante el método <code>isChecked()</code>, y puede modificarse con <code>setChecked(boolean)</code>.</p>
+<p>El evento más importante asociado a este control es <code>onCheckedChanged(CompoundButton checkView, boolean isChecked)</code>, que permite capturar el momento en que el usuario cambia el estado de la casilla.  </p>
+<p>El parámetro <code>checkView</code> hace referencia al propio CheckBox que generó el evento.</p>
+<h2 id="radiobutton">RadioButton<a class="headerlink" href="#radiobutton" title="Permanent link">&para;</a></h2>
+<p>El control <strong>RadioButton</strong> tiene un comportamiento similar al del CheckBox, pero con una diferencia clave:<br />
+los RadioButtons suelen <strong>agruparse dentro de un <code>RadioGroup</code></strong>, lo que garantiza que <strong>solo uno puede estar seleccionado</strong> al mismo tiempo. Cuando el usuario selecciona un RadioButton, el resto del grupo se desmarcan automáticamente.</p>
+<p>Su atributo más habitual es <code>android:text</code>, con el que se asigna una etiqueta visible.  </p>
+<p>El evento principal es <code>onCheckedChanged(RadioGroup group, int checkedId)</code>, que se dispara cuando cambia la selección dentro del grupo. En el código también pueden utilizarse métodos como <code>clearCheck()</code>, para dejar el grupo sin ninguna opción seleccionada.</p>
+<h2 id="button">Button<a class="headerlink" href="#button" title="Permanent link">&para;</a></h2>
+<p>El <strong>Button</strong> es el control más simple y directo: un botón estándar que el usuario puede pulsar para ejecutar una acción. El evento más importante asociado es <code>onClick(View v)</code>, que se ejecuta cuando se hace clic sobre él.</p>
+<p>Este control es la base para la interacción del usuario con la aplicación.</p>
+<h2 id="togglebutton">ToggleButton<a class="headerlink" href="#togglebutton" title="Permanent link">&para;</a></h2>
+<p>El <strong>ToggleButton</strong> es una variante del botón clásico que mantiene <strong>dos estados persistentes</strong>: encendido y apagado. Funciona como un interruptor, y también utiliza el evento <code>onClick(View v)</code> para capturar la acción del usuario.</p>
+<p>Para conocer el estado actual, puede usarse el método <code>isChecked()</code>, de forma similar a los CheckBox. Este tipo de control resulta útil para activar o desactivar funciones dentro de una app.</p>
+<h2 id="imagebutton">ImageButton<a class="headerlink" href="#imagebutton" title="Permanent link">&para;</a></h2>
+<p>El <strong>ImageButton</strong> combina la funcionalidad del botón con una representación visual más atractiva.<br />
+En lugar de texto, muestra una <strong>imagen</strong> que el usuario puede pulsar. El atributo <code>android:src</code> permite definir la imagen que se mostrará, generalmente almacenada dentro de la carpeta <code>/res/drawable/</code>.</p>
+<p>En esencia, un ImageButton actúa como un botón convencional, pero ofrece una presentación más visual, ideal para iconos o acciones rápidas.</p>
+<h2 id="imageview">ImageView<a class="headerlink" href="#imageview" title="Permanent link">&para;</a></h2>
+<p>Por último, el control <strong>ImageView</strong> permite <strong>mostrar imágenes en la interfaz</strong> sin que el usuario pueda interactuar directamente con ellas. No tiene funcionalidad propia, aunque puede combinarse con eventos de otros controles o utilizarse como elemento decorativo o informativo.</p>
+<p>El atributo principal es <code>android:src</code>, que define la imagen a mostrar. Si se desea cambiar la imagen de forma dinámica desde el código, se puede usar el método <code>setImageResource()</code> o <code>setImageBitmap()</code>.</p>
+<h2 id="actividades">Actividades<a class="headerlink" href="#actividades" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong><abbr title="Prácticas">PR</abbr> 208</strong> (<abbr title="Desarrolla aplicaciones para dispositivos móviles analizando y empleando las tecnologías y librerías específicas.">RA2</abbr> / <abbr title=".">CE2a</abbr> <abbr title=".">CE2b</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 5p) Crea y prueba tu primera función <code>@Composable</code> que muestre un mensaje en pantalla utilizando el componente <code>Text</code>. Experimenta con diferentes tamaños, colores y estilos de texto para observar cómo <em>Compose</em> renderiza la interfaz en tiempo real.</li>
+<li><strong><abbr title="Prácticas">PR</abbr> 209</strong> (<abbr title="Desarrolla aplicaciones para dispositivos móviles analizando y empleando las tecnologías y librerías específicas.">RA2</abbr> / <abbr title=".">CE2b</abbr> / <abbr title="Rúbrica actividad individual.">IC2</abbr> / 5p) Diseña una pequeña interfaz con dos textos jerarquizados utilizando un <code>Column</code>. Aplica márgenes, colores y tamaños diferentes para comprender cómo <em>Compose</em> organiza y alinea los elementos en la pantalla.</li>
+<li><strong><abbr title="Prácticas">PR</abbr> 210</strong> (<abbr title="Desarrolla aplicaciones para dispositivos móviles analizando y empleando las tecnologías y librerías específicas.">RA2</abbr> / <abbr title=".">CE2b</abbr> / <abbr title="Rúbrica actividad individual.">IC2</abbr> / 5p) Crea una función <code>@Composable</code> con un botón que, al pulsarse, muestre un mensaje en consola. Este ejercicio busca reforzar la relación entre la interfaz declarativa y la lógica de interacción del usuario a través del evento <code>onClick</code>.</li>
+<li><strong><abbr title="Prácticas">PR</abbr> 211</strong> (<abbr title="Desarrolla aplicaciones para dispositivos móviles analizando y empleando las tecnologías y librerías específicas.">RA2</abbr> / <abbr title=".">CE2c</abbr> / <abbr title="Rúbrica actividad colaborativa.">IC3</abbr> / 5p) Implementa un contador de pulsaciones utilizando un estado mutable con remember. Cada vez que el usuario presione el botón, el valor deberá incrementarse y mostrarse en pantalla, evidenciando la recomposición automática de <em>Compose</em>.</li>
+<li><strong><abbr title="Prácticas">PR</abbr> 212</strong> (<abbr title="Desarrolla aplicaciones para dispositivos móviles analizando y empleando las tecnologías y librerías específicas.">RA2</abbr> / <abbr title=".">CE2c</abbr> <abbr title=".">CE2d</abbr> / <abbr title="Rúbrica actividad colaborativa.">IC3</abbr> / 5p) Diseña una interfaz que permita al usuario escribir su nombre en un <code>TextField</code> y muestre en tiempo real un saludo personalizado. Observa cómo el estado del texto se actualiza dinámicamente conforme cambia la entrada del usuario.</li>
+<li><strong><abbr title="Actividades de refuerzo.">AR</abbr> 213</strong> (<abbr title="Desarrolla aplicaciones para dispositivos móviles analizando y empleando las tecnologías y librerías específicas.">RA2</abbr> / <abbr title=".">CE2a</abbr> <abbr title=".">CE2b</abbr> / <abbr title="Rúbrica actividad individual.">IC2</abbr> / 3p) Crea una interfaz sencilla que combine varios textos (Text) y un botón (<code>Button</code>) en una misma columna. El objetivo es reforzar la comprensión del modelo declarativo de <em>Compose</em> y afianzar el uso de modificadores básicos como padding, color y fontSize.</li>
+<li><strong><abbr title="Actividades de profundización.">AP</abbr> 314</strong> (<abbr title="Desarrolla aplicaciones para dispositivos móviles analizando y empleando las tecnologías y librerías específicas.">RA2</abbr> / <abbr title=".">CE2c</abbr> <abbr title=".">CE2d</abbr> / <abbr title="Rúbrica actividad colaborativa.">IC3</abbr> / 3p) Diseña una miniapp con un campo de texto (<code>TextField</code>) y dos botones que permitan al usuario escribir un mensaje y, opcionalmente, borrarlo o reiniciar el contenido. Implementa el manejo de estado con remember y mutableStateOf para comprender cómo se actualiza la interfaz al modificar el estado interno.</li>
+</ul>
+<!-- Resultados de Aprendizaje & Criterios de Evaluación -->
+<!-- Instrumentos de Evaluación -->
+<!-- Instrumentos de Calificación -->
+<!-- Tipo de actividades -->
+<!-- Otras abreviaciones -->
 
 
 
@@ -1042,7 +1219,8 @@
   
 </div>
       
-        <div class="md-social">
+        
+<div class="md-social">
   
     
     
@@ -1110,10 +1288,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "toc.integrate", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.footer", "toc.follow", "content.tooltips", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "toc.integrate", "navigation.indexes", "navigation.top", "navigation.tracking", "navigation.footer", "toc.follow", "content.tooltips", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
