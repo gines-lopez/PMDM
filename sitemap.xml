@@ -2,122 +2,138 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://github.com/gines-lopez/PMDM/index.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/gines-lopez/PMDM/includes/abbreviations.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/gines-lopez/PMDM/kotlin/00_Intro.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/gines-lopez/PMDM/kotlin/01_VariablesEntradaDatos.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/gines-lopez/PMDM/kotlin/02_ElementosControl.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/gines-lopez/PMDM/kotlin/03_FunCol.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/gines-lopez/PMDM/kotlin/04_POO.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/gines-lopez/PMDM/ut/ut01/01_TecnologiasMoviles.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/gines-lopez/PMDM/ut/ut01/02_IntroAndroid.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/gines-lopez/PMDM/ut/ut01/03_FundamentosAPP.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/gines-lopez/PMDM/ut/ut01/04_RecursosAPP.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/gines-lopez/PMDM/ut/ut01/05_ClaseR.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/gines-lopez/PMDM/ut/ut01/06_EstructuraProyecto.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/gines-lopez/PMDM/ut/ut01/07_Permisos.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/gines-lopez/PMDM/ut/ut01/ResumenUT.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/gines-lopez/PMDM/ut/ut02/01_ElementosBasicos.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/gines-lopez/PMDM/ut/ut02/02_CicloVidaAplicacion.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/gines-lopez/PMDM/ut/ut02/03_CicloVidaActivity.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/gines-lopez/PMDM/ut/ut02/04_DisenyoIU.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/gines-lopez/PMDM/ut/ut02/05_ElementosBasicos.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/gines-lopez/PMDM/ut/ut02/06_DiferentesConfiguraciones.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/gines-lopez/PMDM/ut/ut02/07_JetpackCompose.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/gines-lopez/PMDM/ut/ut02/08_ControlesBasicos.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/gines-lopez/PMDM/ut/ut02/ResumenUT.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/gines-lopez/PMDM/ut/ut03/01_ManejoListas.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/gines-lopez/PMDM/ut/ut03/02_Adaptadores.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/gines-lopez/PMDM/ut/ut03/03_CreacionListas.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/gines-lopez/PMDM/ut/ut03/04_SistemasNotificacion.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/gines-lopez/PMDM/ut/ut03/05_MaterialDesign.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
     </url>
     <url>
          <loc>https://github.com/gines-lopez/PMDM/ut/ut03/ResumenUT.html</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-11-05</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/gines-lopez/PMDM/ut/ut04/01_Funciones.html</loc>
+         <lastmod>2025-11-05</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/gines-lopez/PMDM/ut/ut04/ResumenUT.html</loc>
+         <lastmod>2025-11-05</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/gines-lopez/PMDM/ut/ut05/01_ViewModel.html</loc>
+         <lastmod>2025-11-05</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/gines-lopez/PMDM/ut/ut05/02_InstanciaViewModel.html</loc>
+         <lastmod>2025-11-05</lastmod>
     </url>
 </urlset>
