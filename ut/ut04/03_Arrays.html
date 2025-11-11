@@ -1363,18 +1363,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejemplo-1-funcion-que-recibe-un-array" class="md-nav__link">
+  <a href="#funcion-que-recibe-un-array" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejemplo 1: función que recibe un array
+      Función que recibe un array
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejemplo-2-funcion-que-devuelve-un-array" class="md-nav__link">
+  <a href="#funcion-que-devuelve-un-array" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejemplo 2: función que devuelve un array
+      Función que devuelve un array
     </span>
   </a>
   
@@ -1546,7 +1546,7 @@ Sin embargo, cuando necesitamos manejar varios datos del mismo tipo —por ejemp
 </div>
 <h2 id="funciones-y-arrays-parametros-y-retornos">Funciones y arrays: parámetros y retornos<a class="headerlink" href="#funciones-y-arrays-parametros-y-retornos" title="Permanent link">&para;</a></h2>
 <p>Las funciones pueden <strong>recibir arrays como parámetros</strong> o <strong>devolverlos como resultado</strong>. Esto nos permite modularizar aún más el código.</p>
-<h3 id="ejemplo-1-funcion-que-recibe-un-array">Ejemplo 1: función que recibe un array<a class="headerlink" href="#ejemplo-1-funcion-que-recibe-un-array" title="Permanent link">&para;</a></h3>
+<h3 id="funcion-que-recibe-un-array">Función que recibe un array<a class="headerlink" href="#funcion-que-recibe-un-array" title="Permanent link">&para;</a></h3>
 <div class="language-kotlin highlight"><pre><span></span><code><span id="__span-4-1"><span class="linenos" data-linenos=" 1 "></span><span class="kd">fun</span><span class="w"> </span><span class="nf">mostrarMayores</span><span class="p">(</span><span class="n">arreglo</span><span class="p">:</span><span class="w"> </span><span class="n">IntArray</span><span class="p">,</span><span class="w"> </span><span class="n">limite</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-4-2"><span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">valor</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">arreglo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-4-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">valor</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">limite</span><span class="p">)</span><span class="w"> </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Valor mayor que </span><span class="si">$</span><span class="n">limite</span><span class="s">: </span><span class="si">$</span><span class="n">valor</span><span class="s">&quot;</span><span class="p">)</span>
@@ -1558,7 +1558,7 @@ Sin embargo, cuando necesitamos manejar varios datos del mismo tipo —por ejemp
 </span><span id="__span-4-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="n">mostrarMayores</span><span class="p">(</span><span class="n">datos</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">)</span>
 </span><span id="__span-4-10"><span class="linenos" data-linenos="10 "></span><span class="p">}</span>
 </span></code></pre></div>
-<h3 id="ejemplo-2-funcion-que-devuelve-un-array">Ejemplo 2: función que devuelve un array<a class="headerlink" href="#ejemplo-2-funcion-que-devuelve-un-array" title="Permanent link">&para;</a></h3>
+<h3 id="funcion-que-devuelve-un-array">Función que devuelve un array<a class="headerlink" href="#funcion-que-devuelve-un-array" title="Permanent link">&para;</a></h3>
 <div class="language-kotlin highlight"><pre><span></span><code><span id="__span-5-1"><span class="linenos" data-linenos=" 1 "></span><span class="kd">fun</span><span class="w"> </span><span class="nf">generarPares</span><span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">):</span><span class="w"> </span><span class="n">IntArray</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-5-2"><span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IntArray</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 </span><span id="__span-5-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">resultado</span><span class="p">.</span><span class="na">indices</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
