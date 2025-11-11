@@ -1332,27 +1332,12 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Conceptos básicos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-promedio-de-alturas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejemplo: promedio de alturas
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#22-propiedad-indices" class="md-nav__link">
+  <a href="#propiedad-indices" class="md-nav__link">
     <span class="md-ellipsis">
-      2.2 Propiedad indices
+      Propiedad indices
     </span>
   </a>
   
@@ -1498,10 +1483,9 @@ Sin embargo, cuando necesitamos manejar varios datos del mismo tipo —por ejemp
 </tr>
 </tbody>
 </table>
-<h3 id="ejemplo-promedio-de-alturas">Ejemplo: promedio de alturas<a class="headerlink" href="#ejemplo-promedio-de-alturas" title="Permanent link">&para;</a></h3>
-<p><strong>Problema:</strong><br />
-Definir un <code>FloatArray</code> de 5 elementos que contenga las alturas de 5 personas.<br />
-Calcular el promedio y contar cuántas personas son más altas o más bajas que dicho promedio.</p>
+<div class="admonition note">
+<p class="admonition-title">Ejemplo</p>
+<p>Definir un <code>FloatArray</code> de 5 elementos que contenga las alturas de 5 personas. Calcular el promedio y contar cuántas personas son más altas o más bajas que dicho promedio.</p>
 <div class="language-kotlin highlight"><pre><span></span><code><span id="__span-0-1"><span class="linenos" data-linenos=" 1 "></span><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-2"><span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">alturas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FloatArray</span><span class="p">(</span><span class="m">5</span><span class="p">)</span>
 </span><span id="__span-0-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">alturas</span><span class="p">.</span><span class="na">indices</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -1523,7 +1507,8 @@ Calcular el promedio y contar cuántas personas son más altas o más bajas que 
 </span><span id="__span-0-19"><span class="linenos" data-linenos="19 "></span><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Personas más bajas que el promedio: </span><span class="si">$</span><span class="n">menores</span><span class="s">&quot;</span><span class="p">)</span>
 </span><span id="__span-0-20"><span class="linenos" data-linenos="20 "></span><span class="p">}</span>
 </span></code></pre></div>
-<h2 id="22-propiedad-indices">2.2 Propiedad <code>indices</code><a class="headerlink" href="#22-propiedad-indices" title="Permanent link">&para;</a></h2>
+</div>
+<h2 id="propiedad-indices">Propiedad <code>indices</code><a class="headerlink" href="#propiedad-indices" title="Permanent link">&para;</a></h2>
 <p>Todas las clases de arrays (<code>IntArray</code>, <code>ByteArray</code>, <code>LongArray</code>, etc.) disponen de la propiedad <code>indices</code>. Esta propiedad nos devuelve un rango con todos los <strong>índices válidos</strong> del array.</p>
 <div class="language-kotlin highlight"><pre><span></span><code><span id="__span-1-1"><span class="linenos" data-linenos="1 "></span><span class="kd">val</span><span class="w"> </span><span class="nv">numeros</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">intArrayOf</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="m">30</span><span class="p">)</span>
 </span><span id="__span-1-2"><span class="linenos" data-linenos="2 "></span>
