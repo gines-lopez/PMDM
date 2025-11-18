@@ -1674,13 +1674,12 @@
 <li>
 <p><strong><abbr title="Prácticas">PR</abbr> 419</strong> (<abbr title="Desarrolla aplicaciones para dispositivos móviles analizando y empleando las tecnologías y librerías específicas.">RA2</abbr> / <abbr title=".">CE2a</abbr> / <abbr title="Rúbrica actividad individual.">IC2</abbr> / 5p). Crea un sistema orientado a objetos para gestionar animales de un <strong>centro veterinario</strong>. Representa el resultado mediante <strong>Jetpack Compose</strong> usando una lista dinámica con <code>LazyColumn</code>.</p>
 <ol>
-<li>Define un <strong>enum class</strong> <code>Genero</code> con: <code>MACHO</code> y <code>HEMBRA</code>.</li>
 <li>
 <p>Implementa una <strong>clase abstracta</strong> <code>Animal</code>, con:</p>
 <ul>
 <li><code>nombre: String</code></li>
 <li><code>edad: Int</code></li>
-<li><code>genero: Genero</code></li>
+<li><code>genero: String</code></li>
 <li><code>historial: HistorialClinico</code></li>
 <li>Método abstracto <code>fun sonido(): String</code></li>
 <li>Método no abstracto <code>fun descripcionBasica(): String</code></li>
