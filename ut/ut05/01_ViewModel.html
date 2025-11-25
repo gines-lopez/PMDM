@@ -11,6 +11,8 @@
         <link rel="canonical" href="https://github.com/gines-lopez/PMDM/ut/ut05/01_ViewModel.html">
       
       
+        <link rel="prev" href="ResumenUT.html">
+      
       
       
       <link rel="icon" href="../../img/favicon.ico">
@@ -18,7 +20,7 @@
     
     
       
-        <title>ViewModel - Programación multimedia y dispositivos móviles</title>
+        <title>01. ViewModel - Programación multimedia y dispositivos móviles</title>
       
     
     
@@ -122,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ViewModel
+              01. ViewModel
             
           </span>
         </div>
@@ -1370,6 +1372,207 @@
   
 
     
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UT 05. Profundización en el desarrollo de aplicaciones multiplataforma
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            UT 05. Profundización en el desarrollo de aplicaciones multiplataforma
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ResumenUT.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Propuesta didáctica UT 05
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    01. ViewModel
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="01_ViewModel.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    01. ViewModel
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introducción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alcance-de-un-viewmodel-viewmodel-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alcance de un ViewModel (ViewModel Scope)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instanciando-un-viewmodel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instanciando un ViewModel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-uso-y-definicion-de-un-viewmodel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de uso y definición de un ViewModel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practicas-no-recomendadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✋ Prácticas no recomendadas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actividad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actividad
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1900,19 +2103,58 @@
 <p>Las siguientes son varias prácticas recomendadas clave que debes seguir cuando implementes <strong><code>ViewModel</code></strong>:</p>
 <ul>
 <li>
-<p>❌ <strong>NO</strong> definas <strong><code>ViewModel</code></strong> para <em>composables</em> reutilizables en tu UI o para componentes de <abbr title="Interfaz de usuario">IU</abbr> que no sean de nivel superior. Deberíamos definirlos a nivel de Screen (pantalla).</p>
+<p><strong>NO</strong> definas <strong><code>ViewModel</code></strong> para <em>composables</em> reutilizables en tu UI o para componentes de <abbr title="Interfaz de usuario">IU</abbr> que no sean de nivel superior. Deberíamos definirlos a nivel de Screen (pantalla).</p>
 </li>
 <li>
-<p>❌ Los ViewModels <strong>NO deberían conocer los detalles de implementación de la <abbr title="Interfaz de usuario">IU</abbr></strong>. Mantén los nombres de los métodos que expone la API de ViewModel y los de los campos del UIState lo más genéricos posible.</p>
+<p>Los ViewModels <strong>NO deberían conocer los detalles de implementación de la <abbr title="Interfaz de usuario">IU</abbr></strong>. Mantén los nombres de los métodos que expone la API de ViewModel y los de los campos del UIState lo más genéricos posible.</p>
 </li>
 <li>
-<p>❌ Como pueden tener una vida más larga que el <strong><code>ViewModelStoreOwner</code></strong>, los ViewModels <strong>NO deberían contener ninguna referencia de APIs relacionadas con el ciclo de vida</strong>, como <strong><code>Context</code></strong> o <strong><code>Resources</code></strong> para evitar fugas de memoria.</p>
+<p>Como pueden tener una vida más larga que el <strong><code>ViewModelStoreOwner</code></strong>, los ViewModels <strong>NO deberían contener ninguna referencia de APIs relacionadas con el ciclo de vida</strong>, como <strong><code>Context</code></strong> o <strong><code>Resources</code></strong> para evitar fugas de memoria.</p>
 </li>
 <li>
-<p>❌ <strong>NO pases ViewModels a funciones ni otros componentes de la <abbr title="Interfaz de usuario">IU</abbr></strong>. Esto evita que los componentes de nivel inferior accedan a más datos y lógica de los que necesitan.</p>
+<p><strong>NO pases ViewModels a funciones ni otros componentes de la <abbr title="Interfaz de usuario">IU</abbr></strong>. Esto evita que los componentes de nivel inferior accedan a más datos y lógica de los que necesitan.</p>
 </li>
 <li>
-<p>❌ Derivado del anterior <strong>NO instancies directamente un objeto ViewModels</strong>. En su lugar, usa algún tipo de <em>'proveedor de ViewModels'</em> para obtener una instancia del mismo.</p>
+<p>Derivado del anterior <strong>NO instancies directamente un objeto ViewModels</strong>. En su lugar, usa algún tipo de <em>'proveedor de ViewModels'</em> para obtener una instancia del mismo.</p>
+</li>
+</ul>
+<h2 id="actividad">Actividad<a class="headerlink" href="#actividad" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 501</strong>. Toca hacer un poco de investigación para poner el modelo MVVM en contexto. Para ello, debes seleccionar tres arquitecturas de la siguiente lista</p>
+<ul>
+<li>Arquitectura monolítica</li>
+<li>Arquitectura cliente–servidor clásica</li>
+<li><abbr title="Modelo - Vista - Controlador">MVC</abbr></li>
+<li>Arquitectura basada en servicios (SOA)</li>
+<li>Microservicios</li>
+<li>Serverless</li>
+<li>SPA (Single Page Applications)</li>
+<li>REST</li>
+<li>GraphQL</li>
+<li>ECS (Entity–Component–System) para videojuegos</li>
+<li>Arquitectura cliente–servidor multijugador en videojuegos</li>
+</ul>
+<p>Redactar un texto que incluya, para cada arquitectura, además de la MVVM:</p>
+<ul>
+<li>Descripción general: en qué consiste y cómo se organiza.</li>
+<li>Tecnologías o frameworks habituales en web, móvil o videojuegos.</li>
+<li>Ventajas y desventajas principales.</li>
+<li>Casos de uso reales, indicando si se aplica mejor a web, móvil, videojuegos o varios.</li>
+</ul>
+<p>Luego haz una comparación:</p>
+<ul>
+<li>Escalabilidad</li>
+<li>Rendimiento</li>
+<li>Complejidad</li>
+<li>Coste de mantenimiento</li>
+<li>Adecuación a proyectos web, móviles y videojuegos</li>
+<li>Facilidad para trabajar con APIs, backend y sincronización de datos</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">La entrega</p>
+<p>Sé imaginativo… o no. Esta actividad puede entregarse en el formato que consideres más adecuado para transmitir tu mensaje: infografía, vídeo, documento de texto, presentación… <em>sky is the limit</em> 🚀!</p>
+</div>
 </li>
 </ul>
 <!-- Resultados de Aprendizaje & Criterios de Evaluación -->
@@ -1950,6 +2192,28 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="ResumenUT.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Propuesta didáctica UT 05">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Propuesta didáctica UT 05
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
