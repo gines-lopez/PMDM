@@ -1537,7 +1537,7 @@
           <li class="md-nav__item">
   <a href="#practicas-no-recomendadas" class="md-nav__link">
     <span class="md-ellipsis">
-      ✋ Prácticas no recomendadas
+      Prácticas no recomendadas
     </span>
   </a>
   
@@ -1708,9 +1708,6 @@
 <p>Existen más formas de crear un <strong><code>ViewModel</code></strong> que veremos más adelante.</p>
 <h3 id="ejemplo-de-uso-y-definicion-de-un-viewmodel">Ejemplo de uso y definición de un ViewModel<a class="headerlink" href="#ejemplo-de-uso-y-definicion-de-un-viewmodel" title="Permanent link">&para;</a></h3>
 <p>Vamos a crear un simple juego del ahorcado para ver cómo se implementa un <strong><code>ViewModel</code></strong>. Para ello vamos a partir de un proyecto donde ya hemos diseñado una UI con <strong>Jetpack Compose</strong>.</p>
-<ul>
-<li>Puedes descargar el proyecto de partida de este enlace <strong><a href="assets/codigo/tema_3_4/Ahorcado_recurso.zip">Ahorcado.zip</a></strong>.</li>
-</ul>
 <p>Vamos a explicar la implementación del interfaz de usuario antes de ver la implementación del <strong><code>ViewModel</code></strong>. Para ello, partimos de la estructura del proyecto que se muestra en la imagen de la derecha donde tenemos un <strong><code>AhorcadoScreen.kt</code></strong>, un <strong><code>AhorcadoUiState.kt</code></strong> que guardará el '<em>State</em>' del UI y un <strong><code>AhorcadoEvent.kt</code></strong> que gestionará los eventos que se produzcan en el UI.</p>
 <p>Android[com.ahorcado][ui][features][juego]AhorcadoEvent.ktAhorcadoScreen.ktAhorcadoUiState.kt[theme][views]MainActivity.kt</p>
 <h4 id="ahorcadouistatekt">AhorcadoUiState.kt<a class="headerlink" href="#ahorcadouistatekt" title="Permanent link">&para;</a></h4>
@@ -2045,7 +2042,7 @@
 </span><span id="__span-19-2"><span class="linenos" data-linenos=" 2 "></span>    lateinit var ahorcadoViewModel: AhorcadoViewModel
 </span><span id="__span-19-3"><span class="linenos" data-linenos=" 3 "></span>    override fun onCreate(savedInstanceState: Bundle?) {
 </span><span id="__span-19-4"><span class="linenos" data-linenos=" 4 "></span>        super.onCreate(savedInstanceState)
-</span><span id="__span-19-5"><span class="linenos" data-linenos=" 5 "></span>        ahorcadoViewModel = AhorcadoViewModel() // 💀💀
+</span><span id="__span-19-5"><span class="linenos" data-linenos=" 5 "></span>        ahorcadoViewModel = AhorcadoViewModel()
 </span><span id="__span-19-6"><span class="linenos" data-linenos=" 6 "></span>        setContent {
 </span><span id="__span-19-7"><span class="linenos" data-linenos=" 7 "></span>            AhorcadoTheme {
 </span><span id="__span-19-8"><span class="linenos" data-linenos=" 8 "></span>                AhorcaDoScreen(
@@ -2058,14 +2055,13 @@
 </span><span id="__span-19-15"><span class="linenos" data-linenos="15 "></span>}
 </span></code></pre></div>
 <p>Si empezamos a jugar y giramos el movil se vuelve a llamar a <strong><code>onCreate()</code></strong> y el estado se pierde.</p>
-<p><a class="glightbox" href="assets/imagenes/tema_3_4/VMError.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="assets/imagenes/tema_3_4/VMError.png" /></a></p>
 </li>
 <li>
 <p>Lo hacemos correctamente u asignaremos el <strong><code>ViewModel</code></strong> a la <strong><code>Activity</code></strong> que es el <strong><code>ViewModelStoreOwner</code></strong> primero usando <strong><code>VieModelProvider</code></strong> con el delegado <strong><code>viewModels()</code></strong></p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><span class="linenos" data-linenos=" 1 "></span>class MainActivity : ComponentActivity() {
 </span><span id="__span-20-2"><span class="linenos" data-linenos=" 2 "></span>    override fun onCreate(savedInstanceState: Bundle?) {
 </span><span id="__span-20-3"><span class="linenos" data-linenos=" 3 "></span>        super.onCreate(savedInstanceState)
-</span><span id="__span-20-4"><span class="linenos" data-linenos=" 4 "></span>        val ahorcadoViewModel: AhorcadoViewModel by viewModels() // ✅
+</span><span id="__span-20-4"><span class="linenos" data-linenos=" 4 "></span>        val ahorcadoViewModel: AhorcadoViewModel by viewModels() 
 </span><span id="__span-20-5"><span class="linenos" data-linenos=" 5 "></span>        setContent {
 </span><span id="__span-20-6"><span class="linenos" data-linenos=" 6 "></span>            AhorcadoTheme {
 </span><span id="__span-20-7"><span class="linenos" data-linenos=" 7 "></span>                AhorcaDoScreen(
@@ -2078,7 +2074,6 @@
 </span><span id="__span-20-14"><span class="linenos" data-linenos="14 "></span>}
 </span></code></pre></div>
 <p>Ahora si volvemos a jugar y giramos el movil el <strong><code>ViewModel</code></strong> permanece y el estado se redibuja.</p>
-<p><a class="glightbox" href="assets/imagenes/tema_3_4/VMok.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="assets/imagenes/tema_3_4/VMok.png" /></a></p>
 </li>
 <li>
 <p>Por último, vamos a probar a crear el <strong><code>ViewModel</code></strong> dentro de una función <strong><code>@Composable</code></strong> usando la función <em>composable</em> <strong><code>viewModel()</code></strong> que <strong>requiere de las dependencias</strong> que hemos comentado antes.</p>
@@ -2087,7 +2082,7 @@
 </span><span id="__span-21-3"><span class="linenos" data-linenos=" 3 "></span>        super.onCreate(savedInstanceState)
 </span><span id="__span-21-4"><span class="linenos" data-linenos=" 4 "></span>        setContent {
 </span><span id="__span-21-5"><span class="linenos" data-linenos=" 5 "></span>            AhorcadoTheme {
-</span><span id="__span-21-6"><span class="linenos" data-linenos=" 6 "></span>                val ahorcadoViewModel: AhorcadoViewModel = viewModel() // ✅
+</span><span id="__span-21-6"><span class="linenos" data-linenos=" 6 "></span>                val ahorcadoViewModel: AhorcadoViewModel = viewModel()
 </span><span id="__span-21-7"><span class="linenos" data-linenos=" 7 "></span>                AhorcaDoScreen(
 </span><span id="__span-21-8"><span class="linenos" data-linenos=" 8 "></span>                    ahorcadoViewModel.ahorcadoState,
 </span><span id="__span-21-9"><span class="linenos" data-linenos=" 9 "></span>                    ahorcadoViewModel::onEventoAhorcado
@@ -2099,7 +2094,7 @@
 </span></code></pre></div>
 </li>
 </ol>
-<h3 id="practicas-no-recomendadas">✋ Prácticas no recomendadas<a class="headerlink" href="#practicas-no-recomendadas" title="Permanent link">&para;</a></h3>
+<h3 id="practicas-no-recomendadas">Prácticas no recomendadas<a class="headerlink" href="#practicas-no-recomendadas" title="Permanent link">&para;</a></h3>
 <p>Las siguientes son varias prácticas recomendadas clave que debes seguir cuando implementes <strong><code>ViewModel</code></strong>:</p>
 <ul>
 <li>
