@@ -1498,16 +1498,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduccion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introducción
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Introducción">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#alcance-de-un-viewmodel-viewmodel-scope" class="md-nav__link">
     <span class="md-ellipsis">
       Alcance de un ViewModel (ViewModel Scope)
@@ -1515,36 +1505,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#instanciando-un-viewmodel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Instanciando un ViewModel
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ejemplo-de-uso-y-definicion-de-un-viewmodel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ejemplo de uso y definición de un ViewModel
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#practicas-no-recomendadas" class="md-nav__link">
     <span class="md-ellipsis">
       Prácticas no recomendadas
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1590,7 +1557,6 @@
 
 
 <h1 id="viewmodel">ViewModel<a class="headerlink" href="#viewmodel" title="Permanent link">&para;</a></h1>
-<h2 id="introduccion">Introducción<a class="headerlink" href="#introduccion" title="Permanent link">&para;</a></h2>
 <p>En anteriores temas cuando hablamos de la <strong>arquitectura de aplicaciones de Android</strong> ya mencionamos este componente como parte de la Capa de UI. En este tema vamos a centrarnos en él para concretar la implementación de MVVM en nuestra capa UI de la arquitectura.</p>
 <p><strong><code>ViewModel</code></strong> es una de esas clases que <strong>Google</strong> definió, allá por 2018, en la primera versión de <strong>Jetpack</strong> para ayudar a los desarrolladores a crear aplicaciones de Android más robustas y fáciles de mantener. <strong><code>ViewModel</code></strong> es una clase que está <strong>diseñada para almacenar y administrar datos relacionados con la interfaz de usuario de una manera que sobrevive a los cambios de configuración</strong>, como la rotación de la pantalla.</p>
 <p>Los beneficios clave de la clase ViewModel son básicamente dos:</p>
@@ -1628,37 +1594,43 @@
 <p><strong>No se destruye</strong> aunque la <strong><code>Activity</code></strong> destruya su vista y permanece en memoria hasta la finalización de la <strong><code>Activity</code></strong>, en ese momento se llama al método <strong><code>onCleared()</code></strong> del <strong><code>ViewModel</code></strong> para que realice las tareas de limpieza necesarias.</p>
 </li>
 </ol>
-<h3 id="instanciando-un-viewmodel">Instanciando un ViewModel<a class="headerlink" href="#instanciando-un-viewmodel" title="Permanent link">&para;</a></h3>
-<p>Hay muchas formas de instanciarlo y eso nos puede llevar a confusión. Pero nosotros vamos a usar la más sencilla y recomendada por Google. De todas formas, si quieres profundizar puedes ver el siguiente <em><strong><a href="https://developer.android.com/static/images/topic/libraries/architecture/viewmodel-apis-cheatsheet.png?hl=es-419">'cheatsheet'</a></strong></em> creado por los desarrolladores de Google.</p>
-<ol>
-<li>
-<p>Para definirlo deberemos crear una clase que herede de <strong><code>ViewModel</code></strong> y que implemente la lógica de negocio que necesitemos.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><span class="linenos" data-linenos="1 "></span>class MiViewModel : ViewModel() { ... }
+<div style="display: none">
+### Instanciando un ViewModel
+
+Hay muchas formas de instanciarlo y eso nos puede llevar a confusión. Pero nosotros vamos a usar la más sencilla y recomendada por Google. De todas formas, si quieres profundizar puedes ver el siguiente _**['cheatsheet'](https://developer.android.com/static/images/topic/libraries/architecture/viewmodel-apis-cheatsheet.png?hl=es-419)**_ creado por los desarrolladores de Google.
+
+1.  Para definirlo deberemos crear una clase que herede de **`ViewModel`** y que implemente la lógica de negocio que necesitemos.
+
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><span class="linenos" data-linenos="1 "></span>class MiViewModel : ViewModel() { ... }
 </span></code></pre></div>
-</li>
-<li>
-<p><strong>No debemos hacer jamás una instancia direcra</strong>.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><span class="linenos" data-linenos="1 "></span>val miVm = MiViewModel()
+
+2. **No debemos hacer jamás una instancia direcra**.
+
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><span class="linenos" data-linenos="1 "></span>val miVm = MiViewModel()
 </span></code></pre></div>
-<p>Ya que el ciclo de vida de un ViewModel está asociado a un <strong><code>ViewModelStoreOwner</code></strong> y por tanto es la clase <strong><code>ViewModelProvider</code></strong> la que se encarga de crearlo y mantenerlo en memoria.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><span class="linenos" data-linenos="1 "></span>// activity es el objeto que implementa ViewModelStoreOwner
+
+    Ya que el ciclo de vida de un ViewModel está asociado a un **`ViewModelStoreOwner`** y por tanto es la clase **`ViewModelProvider`** la que se encarga de crearlo y mantenerlo en memoria.
+
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><span class="linenos" data-linenos="1 "></span>// activity es el objeto que implementa ViewModelStoreOwner
 </span><span id="__span-2-2"><span class="linenos" data-linenos="2 "></span>val miVm = ViewModelProvider(activity).get(MiViewModel::class.java)
 </span></code></pre></div>
-<p>El código anterior, nosotros <strong>no tendremos que crearlo así nunca</strong>, pues <strong>Jetpack</strong> nos proporciona formas más sencillas de hacerlo.</p>
-</li>
-<li>
-<p>Como en el fondo debe ser <strong><code>ViewModelProvider</code></strong> quien lo crea, <strong>si pasamos parámetros al constructor</strong> de la clase <strong><code>MiViewModel</code></strong> no nos va a dejar, más adelante tendremos formas más sencillas de hacerlo. Por tanto, de momento, no deberíamos pasar parámetros al constructor.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><span class="linenos" data-linenos="1 "></span>class MiViewModel(val param: String) : ViewModel() { ... } 
+
+    El código anterior, nosotros **no tendremos que crearlo así nunca**, pues **Jetpack** nos proporciona formas más sencillas de hacerlo.
+
+3.  Como en el fondo debe ser **`ViewModelProvider`** quien lo crea, **si pasamos parámetros al constructor** de la clase **`MiViewModel`** no nos va a dejar, más adelante tendremos formas más sencillas de hacerlo. Por tanto, de momento, no deberíamos pasar parámetros al constructor.
+
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><span class="linenos" data-linenos="1 "></span>class MiViewModel(val param: String) : ViewModel() { ... } 
 </span></code></pre></div>
-<p>Si necesitáramos pasar parámetros al constructor, deberemos crear una clase que implemente <strong><code>ViewModelProvider.Factory</code></strong> y que se encargue de crear el objeto <strong><code>MiViewModel</code></strong> como se indica en la <strong><a href="https://developer.android.com/topic/libraries/architecture/viewmodel/viewmodel-factories">documentación oficial</a></strong>.</p>
-<div class="admonition note">
-<p class="admonition-title">Importante</p>
-<p>Ya veremos más adelante que la librería <strong>Hilt</strong> (Jetpack) para inyección de dependencias me facilita mucho esta tarea. Así pues, no tendremos nunca que crear una clase que implemente <strong><code>ViewModelProvider.Factory</code></strong> cuando pasemos parámetros.</p>
-</div>
-</li>
-<li>
-<p>Delegado de creación <strong><code>by viewModels()</code></strong>, si el propietario es una <strong><code>Activity</code></strong>.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><span class="linenos" data-linenos=" 1 "></span>class MainActivity : ComponentActivity() {
+
+    Si necesitáramos pasar parámetros al constructor, deberemos crear una clase que implemente **`ViewModelProvider.Factory`** y que se encargue de crear el objeto **`MiViewModel`** como se indica en la **[documentación oficial](https://developer.android.com/topic/libraries/architecture/viewmodel/viewmodel-factories)**.
+
+    !!! note "Importante"
+
+        Ya veremos más adelante que la librería **Hilt** (Jetpack) para inyección de dependencias me facilita mucho esta tarea. Así pues, no tendremos nunca que crear una clase que implemente **`ViewModelProvider.Factory`** cuando pasemos parámetros.
+
+4.  Delegado de creación **`by viewModels()`**, si el propietario es una **`Activity`**.
+
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><span class="linenos" data-linenos=" 1 "></span>class MainActivity : ComponentActivity() {
 </span><span id="__span-4-2"><span class="linenos" data-linenos=" 2 "></span>    // Opción 1
 </span><span id="__span-4-3"><span class="linenos" data-linenos=" 3 "></span>    // Lo defino como propiedad de la clase y delego su creación que será al ser usado por 
 </span><span id="__span-4-4"><span class="linenos" data-linenos=" 4 "></span>    // primera vez después de llamarse el método onCreate() de la Activity y puede ser 
@@ -1681,37 +1653,50 @@
 </span><span id="__span-4-21"><span class="linenos" data-linenos="21 "></span>    }
 </span><span id="__span-4-22"><span class="linenos" data-linenos="22 "></span>}
 </span></code></pre></div>
-</li>
-<li>
-<p>Creación con <strong><code>viewModel()</code></strong>, si estamos dentro de una función <strong><code>@Composable</code></strong></p>
-<p>El <strong><code>ViewModelStoreOwner</code></strong> será la <strong><code>Activity</code></strong> que renderiza la composición. No importa que <strong><code>viewModel()</code></strong> sea llamado más veces a lo largo de las recomposiciones pues solo se instanciará en la primera llamada.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><span class="linenos" data-linenos="1 "></span>@Composable
+
+5.  Creación con **`viewModel()`**, si estamos dentro de una función **`@Composable`**
+
+    El **`ViewModelStoreOwner`** será la **`Activity`** que renderiza la composición. No importa que **`viewModel()`** sea llamado más veces a lo largo de las recomposiciones pues solo se instanciará en la primera llamada.
+
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><span class="linenos" data-linenos="1 "></span>@Composable
 </span><span id="__span-5-2"><span class="linenos" data-linenos="2 "></span>fun MiScreen(miVm: MiViewModel = viewModel()) { ... }
 </span></code></pre></div>
-<p>Esta última forma, tal y como indica el <strong><code>cheatSheet</code></strong> de Google, necesita de la siguiente dependencia:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><span class="linenos" data-linenos="1 "></span>dependencies {
+
+    Esta última forma, tal y como indica el **`cheatSheet`** de Google, necesita de la siguiente dependencia:
+
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><span class="linenos" data-linenos="1 "></span>dependencies {
 </span><span id="__span-6-2"><span class="linenos" data-linenos="2 "></span>    // androidx.lifecycle:lifecycle-viewmodel-compose:&lt;version&gt;
 </span><span id="__span-6-3"><span class="linenos" data-linenos="3 "></span>    implementation(libs.androidx.lifecycle.viewmodel.compose)
 </span><span id="__span-6-4"><span class="linenos" data-linenos="4 "></span>}
 </span></code></pre></div>
-<p>por lo que en el <strong><code>libs.versions.toml</code></strong> deberemos añadir la entrada correspondiente.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><span class="linenos" data-linenos="1 "></span>[libraries]
+
+    por lo que en el **`libs.versions.toml`** deberemos añadir la entrada correspondiente.
+
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><span class="linenos" data-linenos="1 "></span>[libraries]
 </span><span id="__span-7-2"><span class="linenos" data-linenos="2 "></span>androidx-lifecycle-viewmodel-compose = { 
 </span><span id="__span-7-3"><span class="linenos" data-linenos="3 "></span>    group = &quot;androidx.lifecycle&quot;, 
 </span><span id="__span-7-4"><span class="linenos" data-linenos="4 "></span>    name = &quot;lifecycle-viewmodel-compose&quot;, 
 </span><span id="__span-7-5"><span class="linenos" data-linenos="5 "></span>    version.ref = &quot;lifecycleRuntimeKtx&quot; 
 </span><span id="__span-7-6"><span class="linenos" data-linenos="6 "></span>}
 </span></code></pre></div>
-</li>
-</ol>
-<p>Nota</p>
-<p>Existen más formas de crear un <strong><code>ViewModel</code></strong> que veremos más adelante.</p>
-<h3 id="ejemplo-de-uso-y-definicion-de-un-viewmodel">Ejemplo de uso y definición de un ViewModel<a class="headerlink" href="#ejemplo-de-uso-y-definicion-de-un-viewmodel" title="Permanent link">&para;</a></h3>
-<p>Vamos a crear un simple juego del ahorcado para ver cómo se implementa un <strong><code>ViewModel</code></strong>. Para ello vamos a partir de un proyecto donde ya hemos diseñado una UI con <strong>Jetpack Compose</strong>.</p>
-<p>Vamos a explicar la implementación del interfaz de usuario antes de ver la implementación del <strong><code>ViewModel</code></strong>. Para ello, partimos de la estructura del proyecto que se muestra en la imagen de la derecha donde tenemos un <strong><code>AhorcadoScreen.kt</code></strong>, un <strong><code>AhorcadoUiState.kt</code></strong> que guardará el '<em>State</em>' del UI y un <strong><code>AhorcadoEvent.kt</code></strong> que gestionará los eventos que se produzcan en el UI.</p>
-<p>Android[com.ahorcado][ui][features][juego]AhorcadoEvent.ktAhorcadoScreen.ktAhorcadoUiState.kt[theme][views]MainActivity.kt</p>
-<h4 id="ahorcadouistatekt">AhorcadoUiState.kt<a class="headerlink" href="#ahorcadouistatekt" title="Permanent link">&para;</a></h4>
-<p>Como hemos comentado guardará el '<em>State</em>' del UI definido en <strong><code>AhorcadoScreen.kt</code></strong> y que básicamente será el estado del conocido juego del ahorcado.</p>
+
+
+Nota
+
+Existen más formas de crear un **`ViewModel`** que veremos más adelante.
+
+### Ejemplo de uso y definición de un ViewModel
+
+Vamos a crear un simple juego del ahorcado para ver cómo se implementa un **`ViewModel`**. Para ello vamos a partir de un proyecto donde ya hemos diseñado una UI con **Jetpack Compose**.
+
+Vamos a explicar la implementación del interfaz de usuario antes de ver la implementación del **`ViewModel`**. Para ello, partimos de la estructura del proyecto que se muestra en la imagen de la derecha donde tenemos un **`AhorcadoScreen.kt`**, un **`AhorcadoUiState.kt`** que guardará el '_State_' del UI y un **`AhorcadoEvent.kt`** que gestionará los eventos que se produzcan en el UI.
+
+Android\[com.ahorcado\]\[ui\]\[features\]\[juego\]AhorcadoEvent.ktAhorcadoScreen.ktAhorcadoUiState.kt\[theme\]\[views\]MainActivity.kt
+
+#### AhorcadoUiState.kt
+
+Como hemos comentado guardará el '_State_' del UI definido en **`AhorcadoScreen.kt`** y que básicamente será el estado del conocido juego del ahorcado.
+
 <div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><span class="linenos" data-linenos=" 1 "></span>data class AhorcadoUiState(
 </span><span id="__span-8-2"><span class="linenos" data-linenos=" 2 "></span>    // Última letra introducida por el usuario, es una cadena de una sola letra.    
 </span><span id="__span-8-3"><span class="linenos" data-linenos=" 3 "></span>    val letraIntroducida: String = &quot;&quot;,
@@ -1732,8 +1717,11 @@
 </span><span id="__span-8-18"><span class="linenos" data-linenos="18 "></span>    }
 </span><span id="__span-8-19"><span class="linenos" data-linenos="19 "></span>}
 </span></code></pre></div>
-<h4 id="ahorcadoeventkt">AhorcadoEvent.kt<a class="headerlink" href="#ahorcadoeventkt" title="Permanent link">&para;</a></h4>
-<p>Lo eventos posibles que vamos a manejar en el UI y que se producirán al interactuar con el mismo los agrupamos en el siguiente <strong><code>sealed interface</code></strong>.</p>
+
+#### AhorcadoEvent.kt
+
+Lo eventos posibles que vamos a manejar en el UI y que se producirán al interactuar con el mismo los agrupamos en el siguiente **`sealed interface`**.
+
 <div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><span class="linenos" data-linenos=" 1 "></span>sealed interface AhorcadoEvent {
 </span><span id="__span-9-2"><span class="linenos" data-linenos=" 2 "></span>    // Estamos en estado EMPEZAR y pasamos a JUGANDO.
 </span><span id="__span-9-3"><span class="linenos" data-linenos=" 3 "></span>    object OnEmpezarJuego : AhorcadoEvent
@@ -1747,8 +1735,11 @@
 </span><span id="__span-9-11"><span class="linenos" data-linenos="11 "></span>    data class OnCambiaLetraIntroducida(val letra: String) : AhorcadoEvent
 </span><span id="__span-9-12"><span class="linenos" data-linenos="12 "></span>}
 </span></code></pre></div>
-<h4 id="ahorcadoscreenkt">AhorcadoScreen.kt<a class="headerlink" href="#ahorcadoscreenkt" title="Permanent link">&para;</a></h4>
-<p>Definimos el UI usando <strong><code>Jetpack Compose</code></strong> y aplicando '<em>State Hoisting</em> ' con funciones <em>composables</em> sin estado o '<em>stateless</em>'. Es la parte más extensa y vamos a describir los <strong>componentes más importantes</strong>.</p>
+
+#### AhorcadoScreen.kt
+
+Definimos el UI usando **`Jetpack Compose`** y aplicando '_State Hoisting_ ' con funciones _composables_ sin estado o '_stateless_'. Es la parte más extensa y vamos a describir los **componentes más importantes**.
+
 <div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><span class="linenos" data-linenos=" 1 "></span>// Recibe el número de fallos y los representa con una 
 </span><span id="__span-10-2"><span class="linenos" data-linenos=" 2 "></span>// de la imágenes del ahorcado definidas en los recursos.
 </span><span id="__span-10-3"><span class="linenos" data-linenos=" 3 "></span>@Composable
@@ -1771,6 +1762,7 @@
 </span><span id="__span-10-20"><span class="linenos" data-linenos="20 "></span>    )
 </span><span id="__span-10-21"><span class="linenos" data-linenos="21 "></span>}
 </span></code></pre></div>
+
 <div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><span class="linenos" data-linenos=" 1 "></span>// Recibe la palabra a adivinar y las letras acertadas y muestra las letras acertadas y 
 </span><span id="__span-11-2"><span class="linenos" data-linenos=" 2 "></span>// las que faltan por acertar representadas por &#39;_&#39;. Tenemos pues un Row con Text para cada letra.
 </span><span id="__span-11-3"><span class="linenos" data-linenos=" 3 "></span>@Composable
@@ -1803,6 +1795,7 @@
 </span><span id="__span-11-30"><span class="linenos" data-linenos="30 "></span>    }
 </span><span id="__span-11-31"><span class="linenos" data-linenos="31 "></span>}
 </span></code></pre></div>
+
 <div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><span class="linenos" data-linenos=" 1 "></span>// TextField encargado de introducir una letra. Su estado está representado por letraState.
 </span><span id="__span-12-2"><span class="linenos" data-linenos=" 2 "></span>// Si hay letra parra jugar se muestra un Button para enviarla. 
 </span><span id="__span-12-3"><span class="linenos" data-linenos=" 3 "></span>// Por esa razón elevamos dos eventos como la introducción de una letra y el envío de la misma.
@@ -1853,6 +1846,7 @@
 </span><span id="__span-12-48"><span class="linenos" data-linenos="48 "></span>    onAceptarResultadoFinalJuego: () -&gt; Unit
 </span><span id="__span-12-49"><span class="linenos" data-linenos="49 "></span>) { }
 </span></code></pre></div>
+
 <div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><span class="linenos" data-linenos=" 1 "></span>// Gestión de los estados de juego y su composición de la UI.
 </span><span id="__span-13-2"><span class="linenos" data-linenos=" 2 "></span>@Composable
 </span><span id="__span-13-3"><span class="linenos" data-linenos=" 3 "></span>fun MuestraInterface(
@@ -1898,7 +1892,9 @@
 </span><span id="__span-13-43"><span class="linenos" data-linenos="43 "></span>    }
 </span><span id="__span-13-44"><span class="linenos" data-linenos="44 "></span>}
 </span></code></pre></div>
-<p>Layouts principales del juego y que gestionan la visualización de su estado en función de la orientación del dispositivo. Vamos a permitir el cambio de orientación para probar qué sucede con el estado del juego guardado en <strong><code>ArhorcadoUiState</code></strong>.</p>
+
+Layouts principales del juego y que gestionan la visualización de su estado en función de la orientación del dispositivo. Vamos a permitir el cambio de orientación para probar qué sucede con el estado del juego guardado en **`ArhorcadoUiState`**.
+
 <div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><span class="linenos" data-linenos=" 1 "></span>@Composable
 </span><span id="__span-14-2"><span class="linenos" data-linenos=" 2 "></span>fun AhorcadoPortrait(ahorcadoState: AhorcadoUiState, onEventSent: (AhorcadoEvent) -&gt; Unit) { }
 </span><span id="__span-14-3"><span class="linenos" data-linenos=" 3 "></span>
@@ -1932,8 +1928,11 @@
 </span><span id="__span-14-31"><span class="linenos" data-linenos="31 "></span>    }
 </span><span id="__span-14-32"><span class="linenos" data-linenos="32 "></span>}
 </span></code></pre></div>
-<h4 id="ahorcadoviewmodelkt">AhorcadoViewModel.kt<a class="headerlink" href="#ahorcadoviewmodelkt" title="Permanent link">&para;</a></h4>
-<p>Esta definición irá dentro del paquete <strong><code>com.ahorcado.ui.features.juego</code></strong>. Aquí definiremos el estado del UI y la lógica de negocio del juego. Hasta aquí llegarán todos los eventos que se produzcan en la UI.</p>
+
+#### AhorcadoViewModel.kt
+
+Esta definición irá dentro del paquete **`com.ahorcado.ui.features.juego`**. Aquí definiremos el estado del UI y la lógica de negocio del juego. Hasta aquí llegarán todos los eventos que se produzcan en la UI.
+
 <div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><span class="linenos" data-linenos=" 1 "></span>class AhorcadoViewModel : ViewModel() {
 </span><span id="__span-15-2"><span class="linenos" data-linenos=" 2 "></span>
 </span><span id="__span-15-3"><span class="linenos" data-linenos=" 3 "></span>    // En esta sección definimos todas las propiedades y métodos de clase que necesitemos.
@@ -1960,7 +1959,9 @@
 </span><span id="__span-15-24"><span class="linenos" data-linenos="24 "></span>
 </span><span id="__span-15-25"><span class="linenos" data-linenos="25 "></span>    ...
 </span></code></pre></div>
-<p>Definiremos lo métodos que gestionan los cambios del estado de la UI</p>
+
+Definiremos lo métodos que gestionan los cambios del estado de la UI
+
 <div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><span class="linenos" data-linenos=" 1 "></span>    private fun empiezaJuego() {
 </span><span id="__span-16-2"><span class="linenos" data-linenos=" 2 "></span>        // Podría ser una fuente de datos.
 </span><span id="__span-16-3"><span class="linenos" data-linenos=" 3 "></span>        val palabras = listOf(&quot;XUSA&quot;, &quot;JUANJO&quot;, &quot;PEPE&quot;, &quot;COMPOSABLE&quot;)
@@ -1972,6 +1973,7 @@
 </span><span id="__span-16-9"><span class="linenos" data-linenos=" 9 "></span>        )
 </span><span id="__span-16-10"><span class="linenos" data-linenos="10 "></span>    }
 </span></code></pre></div>
+
 <div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><span class="linenos" data-linenos=" 1 "></span>    private fun reiniciaJuego() {
 </span><span id="__span-17-2"><span class="linenos" data-linenos=" 2 "></span>        ahorcadoState = AhorcadoUiState()
 </span><span id="__span-17-3"><span class="linenos" data-linenos=" 3 "></span>    }
@@ -2022,6 +2024,7 @@
 </span><span id="__span-17-48"><span class="linenos" data-linenos="48 "></span>        }
 </span><span id="__span-17-49"><span class="linenos" data-linenos="49 "></span>    }
 </span></code></pre></div>
+
 <div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><span class="linenos" data-linenos=" 1 "></span>    // Método encargado de gestionar los eventos que se produzcan en la UI.
 </span><span id="__span-18-2"><span class="linenos" data-linenos=" 2 "></span>    fun onEventoAhorcado(evento : AhorcadoEvent) {
 </span><span id="__span-18-3"><span class="linenos" data-linenos=" 3 "></span>        when (evento) {
@@ -2033,12 +2036,14 @@
 </span><span id="__span-18-9"><span class="linenos" data-linenos=" 9 "></span>    }
 </span><span id="__span-18-10"><span class="linenos" data-linenos="10 "></span>} // Fin de la clase AhorcadoViewModel
 </span></code></pre></div>
-<h4 id="asociando-el-viewmodel-a-la-ui-en-mainactivitykt">Asociando el ViewModel a la UI en MainActivity.kt<a class="headerlink" href="#asociando-el-viewmodel-a-la-ui-en-mainactivitykt" title="Permanent link">&para;</a></h4>
-<p>Vamos ahora a usar nuestro <strong><code>ViewModel</code></strong>...</p>
-<ol>
-<li>
-<p>Supongamos que cramos el objeto <strong><code>ViewModel</code></strong> sin más en el <strong><code>onCreate()</code></strong> sin usar ningún tipo de <strong><code>ViewModelProvider</code></strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><span class="linenos" data-linenos=" 1 "></span>class MainActivity : ComponentActivity() {
+
+#### Asociando el ViewModel a la UI en MainActivity.kt
+
+Vamos ahora a usar nuestro **`ViewModel`**...
+
+1. Supongamos que cramos el objeto **`ViewModel`** sin más en el **`onCreate()`** sin usar ningún tipo de **`ViewModelProvider`**
+
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><span class="linenos" data-linenos=" 1 "></span>class MainActivity : ComponentActivity() {
 </span><span id="__span-19-2"><span class="linenos" data-linenos=" 2 "></span>    lateinit var ahorcadoViewModel: AhorcadoViewModel
 </span><span id="__span-19-3"><span class="linenos" data-linenos=" 3 "></span>    override fun onCreate(savedInstanceState: Bundle?) {
 </span><span id="__span-19-4"><span class="linenos" data-linenos=" 4 "></span>        super.onCreate(savedInstanceState)
@@ -2054,11 +2059,13 @@
 </span><span id="__span-19-14"><span class="linenos" data-linenos="14 "></span>    }
 </span><span id="__span-19-15"><span class="linenos" data-linenos="15 "></span>}
 </span></code></pre></div>
-<p>Si empezamos a jugar y giramos el movil se vuelve a llamar a <strong><code>onCreate()</code></strong> y el estado se pierde.</p>
-</li>
-<li>
-<p>Lo hacemos correctamente u asignaremos el <strong><code>ViewModel</code></strong> a la <strong><code>Activity</code></strong> que es el <strong><code>ViewModelStoreOwner</code></strong> primero usando <strong><code>VieModelProvider</code></strong> con el delegado <strong><code>viewModels()</code></strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><span class="linenos" data-linenos=" 1 "></span>class MainActivity : ComponentActivity() {
+
+    Si empezamos a jugar y giramos el movil se vuelve a llamar a **`onCreate()`** y el estado se pierde.
+
+
+2.  Lo hacemos correctamente u asignaremos el **`ViewModel`** a la **`Activity`** que es el **`ViewModelStoreOwner`** primero usando **`VieModelProvider`** con el delegado **`viewModels()`**
+
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><span class="linenos" data-linenos=" 1 "></span>class MainActivity : ComponentActivity() {
 </span><span id="__span-20-2"><span class="linenos" data-linenos=" 2 "></span>    override fun onCreate(savedInstanceState: Bundle?) {
 </span><span id="__span-20-3"><span class="linenos" data-linenos=" 3 "></span>        super.onCreate(savedInstanceState)
 </span><span id="__span-20-4"><span class="linenos" data-linenos=" 4 "></span>        val ahorcadoViewModel: AhorcadoViewModel by viewModels() 
@@ -2073,11 +2080,12 @@
 </span><span id="__span-20-13"><span class="linenos" data-linenos="13 "></span>    }
 </span><span id="__span-20-14"><span class="linenos" data-linenos="14 "></span>}
 </span></code></pre></div>
-<p>Ahora si volvemos a jugar y giramos el movil el <strong><code>ViewModel</code></strong> permanece y el estado se redibuja.</p>
-</li>
-<li>
-<p>Por último, vamos a probar a crear el <strong><code>ViewModel</code></strong> dentro de una función <strong><code>@Composable</code></strong> usando la función <em>composable</em> <strong><code>viewModel()</code></strong> que <strong>requiere de las dependencias</strong> que hemos comentado antes.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><span class="linenos" data-linenos=" 1 "></span>class MainActivity : ComponentActivity() {
+
+    Ahora si volvemos a jugar y giramos el movil el **`ViewModel`** permanece y el estado se redibuja.
+
+3.  Por último, vamos a probar a crear el **`ViewModel`** dentro de una función **`@Composable`** usando la función _composable_ **`viewModel()`** que **requiere de las dependencias** que hemos comentado antes.
+
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><span class="linenos" data-linenos=" 1 "></span>class MainActivity : ComponentActivity() {
 </span><span id="__span-21-2"><span class="linenos" data-linenos=" 2 "></span>    override fun onCreate(savedInstanceState: Bundle?) {
 </span><span id="__span-21-3"><span class="linenos" data-linenos=" 3 "></span>        super.onCreate(savedInstanceState)
 </span><span id="__span-21-4"><span class="linenos" data-linenos=" 4 "></span>        setContent {
@@ -2092,8 +2100,8 @@
 </span><span id="__span-21-13"><span class="linenos" data-linenos="13 "></span>    }
 </span><span id="__span-21-14"><span class="linenos" data-linenos="14 "></span>}
 </span></code></pre></div>
-</li>
-</ol>
+ </div>
+
 <h3 id="practicas-no-recomendadas">Prácticas no recomendadas<a class="headerlink" href="#practicas-no-recomendadas" title="Permanent link">&para;</a></h3>
 <p>Las siguientes son varias prácticas recomendadas clave que debes seguir cuando implementes <strong><code>ViewModel</code></strong>:</p>
 <ul>
