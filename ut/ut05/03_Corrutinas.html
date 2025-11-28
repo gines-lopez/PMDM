@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://github.com/gines-lopez/PMDM/ut/ut02/03_CicloVidaActivity.html">
+        <link rel="canonical" href="https://github.com/gines-lopez/PMDM/ut/ut05/03_Corrutinas.html">
       
       
-        <link rel="prev" href="02_CicloVidaAplicacion.html">
+        <link rel="prev" href="02_Lambda.html">
       
-      
-        <link rel="next" href="04_DisenyoIU.html">
       
       
       <link rel="icon" href="../../img/favicon.ico">
@@ -22,7 +20,7 @@
     
     
       
-        <title>03. Ciclo de vida de una Actividad - Programación multimedia y dispositivos móviles</title>
+        <title>03. Corrutinas - Programación multimedia y dispositivos móviles</title>
       
     
     
@@ -91,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ciclo-de-vida-de-una-activity" class="md-skip">
+        <a href="#corrutinas" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -126,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              03. Ciclo de vida de una Actividad
+              03. Corrutinas
             
           </span>
         </div>
@@ -687,10 +685,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -716,11 +712,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -736,7 +732,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             UT 02. Elementos básicos de una aplicación e interfaz de usuario para dispositivos móviles
@@ -750,7 +746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ResumenUT.html" class="md-nav__link">
+      <a href="../ut02/ResumenUT.html" class="md-nav__link">
         
   
   
@@ -773,7 +769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_ElementosBasicos.html" class="md-nav__link">
+      <a href="../ut02/01_ElementosBasicos.html" class="md-nav__link">
         
   
   
@@ -796,7 +792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_CicloVidaAplicacion.html" class="md-nav__link">
+      <a href="../ut02/02_CicloVidaAplicacion.html" class="md-nav__link">
         
   
   
@@ -816,32 +812,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    03. Ciclo de vida de una Actividad
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="03_CicloVidaActivity.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../ut02/03_CicloVidaActivity.html" class="md-nav__link">
         
   
   
@@ -852,206 +826,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#callbacks-principales" class="md-nav__link">
-    <span class="md-ellipsis">
-      Callbacks principales
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Callbacks principales">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#oncreate" class="md-nav__link">
-    <span class="md-ellipsis">
-      onCreate()
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#onstart" class="md-nav__link">
-    <span class="md-ellipsis">
-      onStart()
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#onresume" class="md-nav__link">
-    <span class="md-ellipsis">
-      onResume()
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#onpause" class="md-nav__link">
-    <span class="md-ellipsis">
-      onPause()
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#onstop" class="md-nav__link">
-    <span class="md-ellipsis">
-      onStop()
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#onrestart" class="md-nav__link">
-    <span class="md-ellipsis">
-      onRestart()
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ondestroy" class="md-nav__link">
-    <span class="md-ellipsis">
-      onDestroy()
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tabla-ciclo-de-vida-de-una-activity" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tabla: Ciclo de vida de una Activity
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#diagrama-ciclo-de-vida" class="md-nav__link">
-    <span class="md-ellipsis">
-      Diagrama ciclo de vida
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#buenas-practicas-y-errores-comunes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Buenas prácticas y errores comunes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conservar-el-estado-de-una-aplicacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conservar el estado de una aplicación
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Conservar el estado de una aplicación">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#estrategias-para-conservar-el-estado" class="md-nav__link">
-    <span class="md-ellipsis">
-      Estrategias para conservar el estado
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#estado-de-la-instancia" class="md-nav__link">
-    <span class="md-ellipsis">
-      Estado de la instancia
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#navegacion-entre-actividades" class="md-nav__link">
-    <span class="md-ellipsis">
-      Navegación entre actividades
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#como-iniciar-una-activity-desde-otra" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cómo iniciar una Activity desde otra
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Cómo iniciar una Activity desde otra">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#coordinacion-entre-activities" class="md-nav__link">
-    <span class="md-ellipsis">
-      Coordinación entre Activities
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#actividades" class="md-nav__link">
-    <span class="md-ellipsis">
-      Actividades
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1064,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="04_DisenyoIU.html" class="md-nav__link">
+      <a href="../ut02/04_DisenyoIU.html" class="md-nav__link">
         
   
   
@@ -1087,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="05_ElementosBasicos.html" class="md-nav__link">
+      <a href="../ut02/05_ElementosBasicos.html" class="md-nav__link">
         
   
   
@@ -1110,7 +884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="06_DiferentesConfiguraciones.html" class="md-nav__link">
+      <a href="../ut02/06_DiferentesConfiguraciones.html" class="md-nav__link">
         
   
   
@@ -1133,7 +907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="07_JetpackCompose.html" class="md-nav__link">
+      <a href="../ut02/07_JetpackCompose.html" class="md-nav__link">
         
   
   
@@ -1156,7 +930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="08_ControlesBasicos.html" class="md-nav__link">
+      <a href="../ut02/08_ControlesBasicos.html" class="md-nav__link">
         
   
   
@@ -1602,8 +1376,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -1619,11 +1395,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -1639,7 +1415,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             UT 05. Patrones de arquitectura de diseño en aplicaciones para dispositivos móviles
@@ -1653,7 +1429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ut05/ResumenUT.html" class="md-nav__link">
+      <a href="ResumenUT.html" class="md-nav__link">
         
   
   
@@ -1676,7 +1452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ut05/01_ViewModel.html" class="md-nav__link">
+      <a href="01_ViewModel.html" class="md-nav__link">
         
   
   
@@ -1699,7 +1475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ut05/02_Lambda.html" class="md-nav__link">
+      <a href="02_Lambda.html" class="md-nav__link">
         
   
   
@@ -1719,10 +1495,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../ut05/03_Corrutinas.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    03. Corrutinas
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="03_Corrutinas.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1733,6 +1531,128 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-son-las-corrutinas" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué son las corrutinas?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runblocking-puente-entre-codigo-normal-y-corrutinas" class="md-nav__link">
+    <span class="md-ellipsis">
+      runBlocking: puente entre código normal y corrutinas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="runBlocking: puente entre código normal y corrutinas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lanzar-una-corrutina" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lanzar una corrutina
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lanzar-dos-corrutinas-simultaneas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lanzar dos corrutinas simultáneas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funciones-suspendidas-suspend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funciones suspendidas (suspend)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Funciones suspendidas (suspend)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#refactorizando-en-funcion-suspendida" class="md-nav__link">
+    <span class="md-ellipsis">
+      Refactorizando en función suspendida
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#launch-retorna-un-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      launch retorna un Job
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coroutinescope-alternativa-no-bloqueante" class="md-nav__link">
+    <span class="md-ellipsis">
+      coroutineScope: alternativa no bloqueante
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llamadas-concurrentes-con-async" class="md-nav__link">
+    <span class="md-ellipsis">
+      Llamadas concurrentes con async
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actividades
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1761,268 +1681,156 @@
 
 
 
-<p><a class="glightbox" href="../../img/ut02/ut02_01.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="Ciclo de vida de una Activity " src="../../img/ut02/ut02_01.png" /></a></p>
-<h1 id="ciclo-de-vida-de-una-activity">Ciclo de vida de una Activity<a class="headerlink" href="#ciclo-de-vida-de-una-activity" title="Permanent link">&para;</a></h1>
-<p>A lo largo de su vida útil, una <strong>Activity</strong> pasa por varios <strong>estados</strong> y el sistema invoca <strong>métodos de devolución de llamada</strong> (callbacks) en cada transición. Conocerlos te permite <strong>inicializar</strong>, <strong>persistir</strong> y <strong>liberar</strong> recursos correctamente.</p>
-<h2 id="callbacks-principales">Callbacks principales<a class="headerlink" href="#callbacks-principales" title="Permanent link">&para;</a></h2>
-<h3 id="oncreate"><code>onCreate()</code><a class="headerlink" href="#oncreate" title="Permanent link">&para;</a></h3>
+<h1 id="corrutinas">Corrutinas<a class="headerlink" href="#corrutinas" title="Permanent link">&para;</a></h1>
+<p>Kotlin incorpora un potente sistema de <strong>programación asíncrona</strong> basado en <em>coroutines</em> (corrutinas). Permiten ejecutar tareas de forma <strong>no bloqueante</strong>, evitando congelar la interfaz o detener el flujo principal de la aplicación.</p>
+<p>Son fundamentales cuando realizamos:</p>
 <ul>
-<li><strong>Cuándo:</strong> al crear la Activity por primera vez.  </li>
-<li><strong>Qué hacer:</strong>  </li>
-<li>Inicializar la interfaz de usuario con <code>setContentView()</code>.  </li>
-<li>Configurar vistas, adaptadores o datos iniciales.  </li>
-<li><strong>Qué evitar:</strong> operaciones largas en el hilo principal.  </li>
-<li><strong>Siguiente:</strong> siempre se ejecuta <code>onStart()</code>.  </li>
+<li>consultas a bases de datos  </li>
+<li>peticiones a APIs  </li>
+<li>descargas de archivos  </li>
+<li>operaciones pesadas o lentas  </li>
 </ul>
-<h3 id="onstart"><code>onStart()</code><a class="headerlink" href="#onstart" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Cuándo:</strong> la Activity pasa a ser <strong>visible</strong>.  </li>
-<li><strong>Qué hacer:</strong> últimos ajustes antes de que el usuario interactúe (registrar listeners, animaciones ligeras).  </li>
-<li><strong>Siguiente:</strong> <code>onResume()</code>.  </li>
-</ul>
-<h3 id="onresume"><code>onResume()</code><a class="headerlink" href="#onresume" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Cuándo:</strong> la Activity está en <strong>primer plano</strong> y el usuario puede interactuar.  </li>
-<li><strong>Qué hacer:</strong> reanudar lógica principal (cámara, sensores, animaciones, reproducción multimedia).  </li>
-<li><strong>Qué evitar:</strong> operaciones de guardado persistente o llamadas de red.  </li>
-<li><strong>Siguiente:</strong> siempre se ejecuta <code>onPause()</code>.  </li>
-</ul>
-<h3 id="onpause"><code>onPause()</code><a class="headerlink" href="#onpause" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Cuándo:</strong> la Activity pierde el foco (otra Activity encima, diálogo, multitarea).  </li>
-<li><strong>Qué hacer:</strong> pausar recursos costosos (animaciones pesadas, cámara, sensores).  </li>
-<li><strong>Qué evitar:</strong> guardar datos de forma persistente, operaciones de red o base de datos (no hay garantías de tiempo).  </li>
-<li><strong>Siguiente:</strong> puede ir a <code>onResume()</code> (si vuelve al frente) o <code>onStop()</code>.  </li>
-</ul>
-<h3 id="onstop"><code>onStop()</code><a class="headerlink" href="#onstop" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Cuándo:</strong> la Activity deja de ser <strong>visible</strong>.  </li>
-<li><strong>Qué hacer:</strong> guardar estado persistente, cancelar suscripciones y liberar recursos no visibles.  </li>
-<li><strong>Siguiente:</strong> <code>onRestart()</code> (si vuelve al usuario) o <code>onDestroy()</code>.  </li>
-</ul>
-<h3 id="onrestart"><code>onRestart()</code><a class="headerlink" href="#onrestart" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Cuándo:</strong> la Activity estaba detenida y vuelve a iniciarse.  </li>
-<li><strong>Qué hacer:</strong> restaurar el estado previo, volver a configurar recursos necesarios.  </li>
-<li><strong>Siguiente:</strong> siempre <code>onStart()</code>.  </li>
-</ul>
-<h3 id="ondestroy"><code>onDestroy()</code><a class="headerlink" href="#ondestroy" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Cuándo:</strong> justo antes de que la Activity sea eliminada.  </li>
-<li><strong>Qué hacer:</strong> liberar <strong>todos los recursos</strong> restantes (listeners, hilos, ejecutores).  </li>
-<li><strong>Nota:</strong> no siempre se invoca si el sistema mata el proceso abruptamente.  </li>
-</ul>
-<h2 id="tabla-ciclo-de-vida-de-una-activity">Tabla: Ciclo de vida de una Activity<a class="headerlink" href="#tabla-ciclo-de-vida-de-una-activity" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Callback</th>
-<th>Estado / Contexto</th>
-<th>Qué hacer</th>
-<th>Qué evitar</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>onCreate</code></td>
-<td>Creación inicial</td>
-<td><code>setContentView</code>, inicializar <abbr title="Interfaz de usuario">IU</abbr>, dependencias</td>
-<td>Tareas pesadas en el hilo principal</td>
-</tr>
-<tr>
-<td><code>onStart</code></td>
-<td>Visible (no interactiva aún)</td>
-<td>Registrar listeners livianos</td>
-<td>Trabajo de larga duración</td>
-</tr>
-<tr>
-<td><code>onResume</code></td>
-<td>Primer plano (interactiva)</td>
-<td>Reanudar cámara, sensores, animaciones críticas</td>
-<td>Persistencia o I/O de red</td>
-</tr>
-<tr>
-<td><code>onPause</code></td>
-<td>Pierde foco (parcialmente visible)</td>
-<td>Pausar recursos costosos</td>
-<td>Guardado persistente, I/O bloqueante</td>
-</tr>
-<tr>
-<td><code>onStop</code></td>
-<td>No visible</td>
-<td>Guardar estado, liberar recursos no visibles</td>
-<td>Mantener recursos que ya no se usan</td>
-</tr>
-<tr>
-<td><code>onRestart</code></td>
-<td>Regresa desde <code>onStop</code></td>
-<td>Reconfigurar para volver a primer plano</td>
-<td>—</td>
-</tr>
-<tr>
-<td><code>onDestroy</code></td>
-<td>Antes de eliminarse</td>
-<td>Limpieza total (hilos, ejecutores, receptores)</td>
-<td>Confiar en que siempre se llamará</td>
-</tr>
-</tbody>
-</table>
-<h2 id="diagrama-ciclo-de-vida">Diagrama ciclo de vida<a class="headerlink" href="#diagrama-ciclo-de-vida" title="Permanent link">&para;</a></h2>
-<pre class="mermaid"><code>flowchart LR
-  A[onCreate] --&gt; B[onStart] --&gt; C[onResume]
-  C --&gt;|pierde foco| D[onPause]
-  D --&gt;|se vuelve visible otra vez| C
-  D --&gt;|ya no es visible| E[onStop]
-  E --&gt;|regresa| F[onRestart] --&gt; B
-  E --&gt;|finaliza| G[onDestroy]</code></pre>
-<h2 id="buenas-practicas-y-errores-comunes">Buenas prácticas y errores comunes<a class="headerlink" href="#buenas-practicas-y-errores-comunes" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Persistencia: guarda preferencias/estado ligero en <code>onStop()</code>, no en <code>onPause()</code>.</li>
-<li>Rendimiento: evita bloqueos en UI; usa coroutines o <em>WorkManager</em> para trabajo en background.</li>
-<li>Recursos exclusivos (cámara, micrófono, sensores): adquiérelos en <code>onResume()</code> y libéralos en <code>onPause()</code>.</li>
-<li>Navegación: maneja retornos y recomposición de <abbr title="Interfaz de usuario">IU</abbr> pensando en recreaciones (cambios de orientación, <em>multiwindow</em>).</li>
-<li>Evita fugas: desuscribe observadores/<em>listeners</em> en <code>onStop()</code>/<code>onDestroy()</code> según el caso.</li>
-</ul>
-<h2 id="conservar-el-estado-de-una-aplicacion">Conservar el estado de una aplicación<a class="headerlink" href="#conservar-el-estado-de-una-aplicacion" title="Permanent link">&para;</a></h2>
-<p>El usuario espera que <strong>el estado de la <abbr title="Interfaz de usuario">IU</abbr> se conserve</strong> en situaciones como:</p>
-<ul>
-<li>Rotación de pantalla.</li>
-<li>Cambio a modo multiventana.</li>
-<li>Salida temporal de la app para abrir otra.</li>
-</ul>
-<div class="admonition danger">
-<p class="admonition-title">El problema</p>
-<p>El sistema <strong>finaliza la Activity</strong> por defecto en estas situaciones, y se pierde el estado de la interfaz.</p>
-</div>
-<h3 id="estrategias-para-conservar-el-estado">Estrategias para conservar el estado<a class="headerlink" href="#estrategias-para-conservar-el-estado" title="Permanent link">&para;</a></h3>
-<ul>
-<li>
-<p><strong>onSaveInstanceState(Bundle)</strong>  </p>
-<ul>
-<li>Callback que guarda <strong>datos simples y ligeros</strong> (Strings, números…).  </li>
-<li>Los guarda en un <code>Bundle</code> de pares clave-valor.  </li>
-<li>El sistema restaura automáticamente datos de las <code>Views</code> con <code>android:id</code>.</li>
-</ul>
-</li>
-<li>
-<p><strong>ViewModel</strong>  </p>
-<ul>
-<li>Mantiene datos de la <abbr title="Interfaz de usuario">IU</abbr> aunque se destruya y recree la Activity.  </li>
-<li>Ideal para <strong>datos más complejos o pesados</strong>.</li>
-</ul>
-</li>
-<li>
-<p><strong>Almacenamiento local persistente</strong>  </p>
-<ul>
-<li>Para conservar datos que deben sobrevivir incluso si se mata el proceso.  </li>
-<li>Ejemplo: SharedPreferences, Base de datos.</li>
-</ul>
-</li>
-</ul>
-<div class="admonition danger">
-<p class="admonition-title">Importante</p>
-<p>Un <code>Bundle</code> no es adecuado para grandes cantidades de datos (consume memoria y requiere serialización en el hilo principal).</p>
-</div>
-<h3 id="estado-de-la-instancia">Estado de la instancia<a class="headerlink" href="#estado-de-la-instancia" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Si la Activity se <strong>cierra voluntariamente</strong> (<code>finish()</code> o botón Atrás) → el estado se pierde y <strong>no se restaura</strong>.  </li>
-<li>Si la Activity se <strong>finaliza por el sistema</strong> (rotación, falta de memoria) → el sistema guarda el estado en un <code>Bundle</code> y crea una nueva instancia con esos datos cuando el usuario vuelve.</li>
-</ul>
-<h2 id="navegacion-entre-actividades">Navegación entre actividades<a class="headerlink" href="#navegacion-entre-actividades" title="Permanent link">&para;</a></h2>
-<p>Las aplicaciones Android suelen <strong>entrar y salir de actividades</strong> varias veces durante su uso.<br />
-Ejemplo: abrir la app de correo desde la pantalla principal, o iniciar la cámara desde una app de chat.</p>
-<h2 id="como-iniciar-una-activity-desde-otra">Cómo iniciar una Activity desde otra<a class="headerlink" href="#como-iniciar-una-activity-desde-otra" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p><strong>startActivity(Intent)</strong>  </p>
-<ul>
-<li>Inicia otra Activity sin esperar resultado.  </li>
-<li>Puede ser de la misma app o de otra (ej. abrir un email, compartir un archivo).  </li>
-</ul>
-</li>
-<li>
-<p><strong>startActivityForResult(Intent, int)</strong>  </p>
-<ul>
-<li>Inicia otra Activity esperando un <strong>resultado</strong>.  </li>
-<li>Ejemplo: elegir un contacto y devolverlo a la Activity que lo pidió.  </li>
-<li>El resultado se recibe en <code>onActivityResult(requestCode, resultCode, data)</code>.  </li>
-</ul>
-</li>
-</ul>
+<h2 id="que-son-las-corrutinas">¿Qué son las corrutinas?<a class="headerlink" href="#que-son-las-corrutinas" title="Permanent link">&para;</a></h2>
+<p>Una corrutina es un <strong>subproceso ligero</strong>, gestionado por Kotlin y no por el sistema operativo. Se pueden lanzar miles sin bloquear el hilo principal. Una corrutina es conceptualmente similar a un hilo (thread) que se implementan en otros lenguajes o inclusive en Kotlin ya que podemos acceder a la clase Thread de Java. Las corrutinas se pueden considerar como subprocesos livianos.</p>
+<p>Para trabajar con corrutinas debemos importar la librutina:</p>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-0-1"><span class="linenos" data-linenos="1 "></span><span class="n">implementation</span><span class="p">(</span><span class="s">&quot;org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 <div class="admonition info">
-<p class="admonition-title">Códigos de resultado</p>
-<ul>
-<li><code>RESULT_OK</code> → todo correcto.  </li>
-<li><code>RESULT_CANCELED</code> → cancelado o error.  </li>
-<li><code>RESULT_FIRST_USER</code> → códigos personalizados.</li>
-</ul>
+<p class="admonition-title">Info</p>
+<p>Usa siempre la última versión estable disponible.</p>
 </div>
-<h3 id="coordinacion-entre-activities">Coordinación entre Activities<a class="headerlink" href="#coordinacion-entre-activities" title="Permanent link">&para;</a></h3>
-<p>Cuando una Activity inicia otra, ambas experimentan <strong>transiciones de ciclo de vida</strong>:</p>
-<pre class="mermaid"><code>sequenceDiagram
-    participant A as Activity A
-    participant B as Activity B
-
-    A-&gt;&gt;B: onPause()
-    Note over B: Válido para casos onCreate(), onStart(), onResume()
-    B-&gt;&gt;B: onCreate()
-    Note over B: B ahora está en primer plano
-    B-&gt;&gt;A: onStop()
-    Note over B: B sigue estando en primer plano</code></pre>
-<div class="admonition info">
-<p class="admonition-title">A tener en cuenta</p>
-<p>Así, la <strong>primera Activity no se detiene por completo hasta que la segunda esté lista</strong>.  Esto permite coordinar datos y transiciones de forma predecible.</p>
-</div>
+<h2 id="runblocking-puente-entre-codigo-normal-y-corrutinas"><code>runBlocking</code>: puente entre código normal y corrutinas<a class="headerlink" href="#runblocking-puente-entre-codigo-normal-y-corrutinas" title="Permanent link">&para;</a></h2>
+<p><code>runBlocking</code> es también un constructor de corrutinas que une el mundo que no es de corrutina de una función regular fun main() y el código con corrutinas dentro de <code>runBlocking</code>. Hasta que no finalizan por completo todas las corrutinas que tienen dentro de runBlocking, no finaliza la función main.</p>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-1-1"><span class="linenos" data-linenos="1 "></span><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">runBlocking</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Iniciando...&quot;</span><span class="p">)</span>
+</span><span id="__span-1-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="m">1000</span><span class="p">)</span>
+</span><span id="__span-1-4"><span class="linenos" data-linenos="4 "></span><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Finalizado.&quot;</span><span class="p">)</span>
+</span><span id="__span-1-5"><span class="linenos" data-linenos="5 "></span><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="lanzar-una-corrutina">Lanzar una corrutina<a class="headerlink" href="#lanzar-una-corrutina" title="Permanent link">&para;</a></h3>
+<p>La creación de una corrutina se logra llamando a la función 'launch' y pasando una función lambda con el algoritmo que queremos que se ejecute en forma paralela al hilo principal de nuestro programa. Recordemos que en Kotlin podemos indicar directamente la implementación de la función, en lugar de disponer el nombre del parámetro, la signación y la implementación de la función.</p>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-2-1"><span class="linenos" data-linenos=" 1 "></span><span class="k">import</span><span class="w"> </span><span class="nn">kotlinx.coroutines.*</span>
+</span><span id="__span-2-2"><span class="linenos" data-linenos=" 2 "></span>
+</span><span id="__span-2-3"><span class="linenos" data-linenos=" 3 "></span><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">runBlocking</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Inicio del programa&quot;</span><span class="p">)</span>
+</span><span id="__span-2-5"><span class="linenos" data-linenos=" 5 "></span>
+</span><span id="__span-2-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="n">launch</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1.</span><span class="p">.</span><span class="m">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">            </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Número: </span><span class="si">$</span><span class="n">i</span><span class="s">&quot;</span><span class="p">)</span>
+</span><span id="__span-2-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">            </span><span class="n">delay</span><span class="p">(</span><span class="m">1000</span><span class="p">)</span>
+</span><span id="__span-2-10"><span class="linenos" data-linenos="10 "></span><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-2-11"><span class="linenos" data-linenos="11 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-12"><span class="linenos" data-linenos="12 "></span>
+</span><span id="__span-2-13"><span class="linenos" data-linenos="13 "></span><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Fin inmediato (la corrutina sigue en segundo plano)&quot;</span><span class="p">)</span>
+</span><span id="__span-2-14"><span class="linenos" data-linenos="14 "></span><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="lanzar-dos-corrutinas-simultaneas">Lanzar dos corrutinas simultáneas<a class="headerlink" href="#lanzar-dos-corrutinas-simultaneas" title="Permanent link">&para;</a></h3>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-3-1"><span class="linenos" data-linenos=" 1 "></span><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">runBlocking</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-2"><span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="n">launch</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1.</span><span class="p">.</span><span class="m">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">            </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;A: </span><span class="si">$</span><span class="n">i</span><span class="s">&quot;</span><span class="p">)</span>
+</span><span id="__span-3-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">            </span><span class="n">delay</span><span class="p">(</span><span class="m">500</span><span class="p">)</span>
+</span><span id="__span-3-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-3-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-8"><span class="linenos" data-linenos=" 8 "></span>
+</span><span id="__span-3-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="n">launch</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-10"><span class="linenos" data-linenos="10 "></span><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">11.</span><span class="p">.</span><span class="m">20</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-11"><span class="linenos" data-linenos="11 "></span><span class="w">            </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;B: </span><span class="si">$</span><span class="n">i</span><span class="s">&quot;</span><span class="p">)</span>
+</span><span id="__span-3-12"><span class="linenos" data-linenos="12 "></span><span class="w">            </span><span class="n">delay</span><span class="p">(</span><span class="m">700</span><span class="p">)</span>
+</span><span id="__span-3-13"><span class="linenos" data-linenos="13 "></span><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-3-14"><span class="linenos" data-linenos="14 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-15"><span class="linenos" data-linenos="15 "></span><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="funciones-suspendidas-suspend">Funciones suspendidas (<code>suspend</code>)<a class="headerlink" href="#funciones-suspendidas-suspend" title="Permanent link">&para;</a></h2>
+<p>Una función de suspensión solo puede ser llamada desde una corrutina o desde otra función de suspensión. Las funciones de suspensión llamadas desde una corrutina se ejecutan en forma secuencial por defecto. Se inician con la palabra <code>suspend</code></p>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-4-1"><span class="linenos" data-linenos="1 "></span><span class="kd">suspend</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">procesoLento</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-2"><span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="m">1000</span><span class="p">)</span>
+</span><span id="__span-4-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Proceso terminado&quot;</span><span class="p">)</span>
+</span><span id="__span-4-4"><span class="linenos" data-linenos="4 "></span><span class="p">}</span>
+</span><span id="__span-4-5"><span class="linenos" data-linenos="5 "></span>
+</span><span id="__span-4-6"><span class="linenos" data-linenos="6 "></span><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">runBlocking</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-7"><span class="linenos" data-linenos="7 "></span><span class="w">    </span><span class="n">procesoLento</span><span class="p">()</span>
+</span><span id="__span-4-8"><span class="linenos" data-linenos="8 "></span><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="refactorizando-en-funcion-suspendida">Refactorizando en función suspendida<a class="headerlink" href="#refactorizando-en-funcion-suspendida" title="Permanent link">&para;</a></h3>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-5-1"><span class="linenos" data-linenos=" 1 "></span><span class="kd">suspend</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">imprimirSecuencia</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-2"><span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1.</span><span class="p">.</span><span class="m">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Valor: </span><span class="si">$</span><span class="n">i</span><span class="s">&quot;</span><span class="p">)</span>
+</span><span id="__span-5-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">        </span><span class="n">delay</span><span class="p">(</span><span class="m">500</span><span class="p">)</span>
+</span><span id="__span-5-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-5-6"><span class="linenos" data-linenos=" 6 "></span><span class="p">}</span>
+</span><span id="__span-5-7"><span class="linenos" data-linenos=" 7 "></span>
+</span><span id="__span-5-8"><span class="linenos" data-linenos=" 8 "></span><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">runBlocking</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="n">launch</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">imprimirSecuencia</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-5-10"><span class="linenos" data-linenos="10 "></span><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="launch-retorna-un-job"><code>launch</code> retorna un <code>Job</code><a class="headerlink" href="#launch-retorna-un-job" title="Permanent link">&para;</a></h2>
+<p>La función launch retorna un objeto de tipo Job que es un identificador de la corrutina iniciada y se puede usar para esperar explícitamente a que se complete. Dicha acción se hace llamando al método <code>join</code>.</p>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-6-1"><span class="linenos" data-linenos="1 "></span><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">runBlocking</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-2"><span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">tarea</span><span class="p">:</span><span class="w"> </span><span class="n">Job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">launch</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-3"><span class="linenos" data-linenos="3 "></span><span class="w">        </span><span class="n">delay</span><span class="p">(</span><span class="m">1000</span><span class="p">)</span>
+</span><span id="__span-6-4"><span class="linenos" data-linenos="4 "></span><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Tarea completada&quot;</span><span class="p">)</span>
+</span><span id="__span-6-5"><span class="linenos" data-linenos="5 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-6-6"><span class="linenos" data-linenos="6 "></span>
+</span><span id="__span-6-7"><span class="linenos" data-linenos="7 "></span><span class="w">    </span><span class="n">tarea</span><span class="p">.</span><span class="na">join</span><span class="p">()</span>
+</span><span id="__span-6-8"><span class="linenos" data-linenos="8 "></span><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Programa finalizado&quot;</span><span class="p">)</span>
+</span><span id="__span-6-9"><span class="linenos" data-linenos="9 "></span><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="coroutinescope-alternativa-no-bloqueante"><code>coroutineScope</code>: alternativa no bloqueante<a class="headerlink" href="#coroutinescope-alternativa-no-bloqueante" title="Permanent link">&para;</a></h2>
+<p>Además del alcance de la corrutina proporcionado por diferentes constructores, es posible declarar su propio alcance utilizando el constructor coroutineScope. Crea un alcance de corrutina y no se completa hasta que se completan todos los elementos secundarios iniciados.</p>
+<p>Los constructores de corrutinas <code>runBlocking</code> y <code>coroutineScope</code> pueden parecer similares porque ambos esperan que su cuerpo y todos sus elementos secundarios se completen. La principal diferencia es que el método runBlocking bloquea el hilo actual para esperar, mientras que coroutineScope simplemente suspende, liberando el hilo subyacente para otros usos. Debido a esa diferencia, runBlocking es una función regular y coroutineScope es una función de suspensión.</p>
+<p>Se puede utilizar un constructor <code>coroutineScope</code> dentro de cualquier función de suspensión para realizar múltiples operaciones simultáneas.</p>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-7-1"><span class="linenos" data-linenos=" 1 "></span><span class="kd">suspend</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">ejemploScope</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">coroutineScope</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-2"><span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="n">launch</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">        </span><span class="n">delay</span><span class="p">(</span><span class="m">500</span><span class="p">)</span>
+</span><span id="__span-7-4"><span class="linenos" data-linenos=" 4 "></span><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Primera tarea&quot;</span><span class="p">)</span>
+</span><span id="__span-7-5"><span class="linenos" data-linenos=" 5 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-7-6"><span class="linenos" data-linenos=" 6 "></span><span class="w">    </span><span class="n">launch</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">        </span><span class="n">delay</span><span class="p">(</span><span class="m">800</span><span class="p">)</span>
+</span><span id="__span-7-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Segunda tarea&quot;</span><span class="p">)</span>
+</span><span id="__span-7-9"><span class="linenos" data-linenos=" 9 "></span><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-7-10"><span class="linenos" data-linenos="10 "></span><span class="p">}</span>
+</span><span id="__span-7-11"><span class="linenos" data-linenos="11 "></span>
+</span><span id="__span-7-12"><span class="linenos" data-linenos="12 "></span><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">runBlocking</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-13"><span class="linenos" data-linenos="13 "></span><span class="w">    </span><span class="n">ejemploScope</span><span class="p">()</span>
+</span><span id="__span-7-14"><span class="linenos" data-linenos="14 "></span><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Todo terminado&quot;</span><span class="p">)</span>
+</span><span id="__span-7-15"><span class="linenos" data-linenos="15 "></span><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="llamadas-concurrentes-con-async">Llamadas concurrentes con <code>async</code><a class="headerlink" href="#llamadas-concurrentes-con-async" title="Permanent link">&para;</a></h2>
+<p>En algunas situaciones si el problema lo permite podemos ejecutar las funciones de suspensión en forma concurrente y eventualmente si disponemos de varios procesadores la ejecución se puede hacer en paralelo con la ventaja de reducir el tiempo. </p>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-8-1"><span class="linenos" data-linenos=" 1 "></span><span class="kd">suspend</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">tareaLenta1</span><span class="p">():</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-2"><span class="linenos" data-linenos=" 2 "></span><span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="m">1000</span><span class="p">)</span>
+</span><span id="__span-8-3"><span class="linenos" data-linenos=" 3 "></span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="m">10</span>
+</span><span id="__span-8-4"><span class="linenos" data-linenos=" 4 "></span><span class="p">}</span>
+</span><span id="__span-8-5"><span class="linenos" data-linenos=" 5 "></span>
+</span><span id="__span-8-6"><span class="linenos" data-linenos=" 6 "></span><span class="kd">suspend</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">tareaLenta2</span><span class="p">():</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-7"><span class="linenos" data-linenos=" 7 "></span><span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="m">2000</span><span class="p">)</span>
+</span><span id="__span-8-8"><span class="linenos" data-linenos=" 8 "></span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="m">20</span>
+</span><span id="__span-8-9"><span class="linenos" data-linenos=" 9 "></span><span class="p">}</span>
+</span><span id="__span-8-10"><span class="linenos" data-linenos="10 "></span>
+</span><span id="__span-8-11"><span class="linenos" data-linenos="11 "></span><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">runBlocking</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-12"><span class="linenos" data-linenos="12 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">async</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">tareaLenta1</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-8-13"><span class="linenos" data-linenos="13 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">async</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">tareaLenta2</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-8-14"><span class="linenos" data-linenos="14 "></span>
+</span><span id="__span-8-15"><span class="linenos" data-linenos="15 "></span><span class="w">    </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Resultado: </span><span class="si">${</span><span class="n">a</span><span class="p">.</span><span class="na">await</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="na">await</span><span class="p">()</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
+</span><span id="__span-8-16"><span class="linenos" data-linenos="16 "></span><span class="p">}</span>
+</span></code></pre></div>
 <h2 id="actividades">Actividades<a class="headerlink" href="#actividades" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p><strong><abbr title="Actividades de clase.">AC</abbr> 201</strong> (<abbr title="Aplica tecnologías de desarrollo para dispositivos móviles evaluando sus características y capacidades.">RA1</abbr> / <abbr title="Se han analizado las limitaciones que plantea la ejecución de aplicaciones en los dispositivos móviles.">CE1a</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 1p) Analiza de forma teórica el ciclo de vida de una Activity en Android y reflexiona sobre su importancia.</p>
-<div class="admonition info">
-<p class="admonition-title">Tareas a realizar</p>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 505</strong> (<abbr title="Desarrolla aplicaciones para dispositivos móviles analizando y empleando las tecnologías y librerías específicas.">RA2</abbr> / <abbr title=".">CE2a</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 1p). Lanza dos corrutinas usando <code>launch</code>.  </p>
 <ul>
-<li>Analogía personal: Crea tu propia analogía comparando cada estado del ciclo de vida de una Activity con situaciones de la vida real (puede ser un día de clase, un viaje, un partido de fútbol…). Explica en 1–2 frases cada relación.</li>
-<li>
-<p>Preguntas de reflexión</p>
-<ul>
-<li>¿Qué podría pasar si una app no guardara la información al pasar de <code>onPause</code> a <code>onStop</code>?</li>
-<li>¿Por qué crees que Android no garantiza siempre que se llame a <code>onDestroy</code>?</li>
-<li>¿En qué se parecen <code>onPause</code> y <code>onStop</code> y en qué se diferencian?</li>
-<li>¿Por qué es importante diferenciar entre estar visible y estar interactiva?</li>
+<li>Una imprime los múltiplos de 5 del 1 al 100 cada 300 ms.  </li>
+<li>La otra imprime los múltiplos de 2 del 100 al 200 cada 500 ms.  </li>
 </ul>
+<p>Observa cómo se intercalan los resultados.</p>
 </li>
 <li>
-<p>Resumen final: Redacta en 5–6 líneas por qué crees que el ciclo de vida es fundamental para que una app funcione correctamente en móviles, donde los recursos son limitados y el usuario cambia de tareas con frecuencia.</p>
-</li>
-</ul>
+<p><strong><abbr title="Actividades de clase.">AC</abbr> 506</strong> (<abbr title="Desarrolla aplicaciones para dispositivos móviles analizando y empleando las tecnologías y librerías específicas.">RA2</abbr> / <abbr title=".">CE2a</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 1p). Crea dos funciones <code>suspend</code>: <code>descargarDatos()</code> y <code>procesarDatos()</code>, cada una con un <code>delay</code> distinto. Ejecútalas con <code>async</code> para que corran simultáneamente y mide el tiempo total de ejecución.</p>
+<div class="admonition note">
+<p class="admonition-title">Simula</p>
 </div>
-</li>
-<li>
-<p><strong><abbr title="Actividades de clase.">AC</abbr> 202</strong> (<abbr title="Aplica tecnologías de desarrollo para dispositivos móviles evaluando sus características y capacidades.">RA1</abbr> / <abbr title="Se han analizado las limitaciones que plantea la ejecución de aplicaciones en los dispositivos móviles.">CE1a</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 1p) Reflexiona sobre la conservación del estado de una aplicación y la navegación entre Activities en Android.</p>
-<ol>
-<li>
-<p>Escenario A:  Imagina que estás escribiendo un correo electrónico en una app. En mitad de la redacción, giras el dispositivo (rotación de pantalla).  </p>
-<ul>
-<li>¿Qué esperas que ocurra con el texto que estabas escribiendo?  </li>
-<li>¿Qué sucedería si la app no guardara el estado correctamente?  </li>
-<li>¿Por qué crees que el sistema destruye y recrea la Activity en una rotación?  </li>
-</ul>
-</li>
-<li>
-<p>Escenario B: Imagina que en una app de mensajería seleccionas <strong>“Adjuntar foto”</strong>. La app abre la <strong>galería</strong> (otra Activity).  </p>
-<ul>
-<li>¿Qué datos debe enviar la app de mensajería a la galería?  </li>
-<li>¿Qué resultado debe devolver la galería a la app de mensajería?  </li>
-<li>¿Qué ocurre con la primera Activity mientras la segunda está activa?  </li>
-</ul>
-</li>
-<li>
-<p>Comparación</p>
-<ul>
-<li>¿En qué se parecen los problemas de <strong>conservar estado</strong> y <strong>navegación entre Activities</strong>?  </li>
-<li>¿Cómo afectan ambos al usuario si no se implementan correctamente?  </li>
-</ul>
-</li>
-</ol>
+<p>El contenido de las funciones que nazca de tu imaginación.</p>
 </li>
 </ul>
 <!-- Resultados de Aprendizaje & Criterios de Evaluación -->
@@ -2065,7 +1873,7 @@ Ejemplo: abrir la app de correo desde la pantalla principal, o iniciar la cámar
       <nav class="md-footer__inner md-grid" aria-label="Pie" >
         
           
-          <a href="02_CicloVidaAplicacion.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 02. Ciclo de vida de una aplicación">
+          <a href="02_Lambda.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 02. Lambda">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2075,27 +1883,11 @@ Ejemplo: abrir la app de correo desde la pantalla principal, o iniciar la cámar
                 Anterior
               </span>
               <div class="md-ellipsis">
-                02. Ciclo de vida de una aplicación
+                02. Lambda
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="04_DisenyoIU.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 04. Diseño de la IU">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Siguiente
-              </span>
-              <div class="md-ellipsis">
-                04. Diseño de la IU
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
