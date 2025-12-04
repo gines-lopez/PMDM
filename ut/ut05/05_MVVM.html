@@ -2024,10 +2024,144 @@
 Solo MVVM + RecyclerView + LiveData.</p>
 </li>
 <li>
-<p><strong><abbr title="Prácticas">PR</abbr> 509</strong> (<abbr title="Desarrolla aplicaciones para dispositivos móviles analizando y empleando las tecnologías y librerías específicas.">RA2</abbr> / <abbr title=".">CE2a</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 1p). </p>
+<p><strong><abbr title="Prácticas">PR</abbr> 509</strong> (<abbr title="Desarrolla aplicaciones para dispositivos móviles analizando y empleando las tecnologías y librerías específicas.">RA2</abbr> / <abbr title=".">CE2a</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 5p). Construir la app <strong>TaskManager Ultra Mega Pro</strong>, que gestiona una lista de tareas simuladas. Debe cumplir:</p>
+<ul>
+<li>Arquitectura <strong>MVVM completa</strong></li>
+<li>Carga de datos mediante corrutinas (<code>suspend</code>, <code>viewModelScope.launch</code>)</li>
+<li>RecyclerView funcional</li>
+<li>Posibilidad de <strong>marcar tareas como completadas</strong></li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Evaluación (5 puntos)</p>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Puntos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MVVM bien estructurado</td>
+<td>1.5</td>
+</tr>
+<tr>
+<td>Corrutinas correctamente implementadas</td>
+<td>1.5</td>
+</tr>
+<tr>
+<td>RecyclerView</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Gestión de estados</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>Limpieza y buenas prácticas</td>
+<td>0.5</td>
+</tr>
+</tbody>
+</table>
+</div>
 </li>
 <li>
-<p><strong><abbr title="Prácticas">PR</abbr> 510</strong> (<abbr title="Desarrolla aplicaciones para dispositivos móviles analizando y empleando las tecnologías y librerías específicas.">RA2</abbr> / <abbr title=".">CE2a</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 1p). </p>
+<p><strong><abbr title="Prácticas">PR</abbr> 510</strong> (<abbr title="Desarrolla aplicaciones para dispositivos móviles analizando y empleando las tecnologías y librerías específicas.">RA2</abbr> / <abbr title=".">CE2a</abbr> / <abbr title="Escala de valores.">IC1</abbr> / 5p). Implementar una aplicación Android que funcione como una <strong>Pokédex básica</strong>, utilizando tecnologías modernas. La app debe mostrar:</p>
+<ol>
+<li>Una lista de Pokémon (imagen).</li>
+<li>Una pantalla de detalle:
+- nombre<br />
+- imagen<br />
+- tipos<br />
+- descripción  </li>
+</ol>
+<ul>
+<li>Modelo (mínimo). Se ha de utilizar un fichero que haga las veces de base de datos.</li>
+</ul>
+<div class="language-kotlin highlight"><pre><span></span><code><span id="__span-16-1"><span class="linenos" data-linenos="1 "></span><span class="kd">data</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Pokemon</span><span class="p">(</span>
+</span><span id="__span-16-2"><span class="linenos" data-linenos="2 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">id</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span>
+</span><span id="__span-16-3"><span class="linenos" data-linenos="3 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">nombre</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span>
+</span><span id="__span-16-4"><span class="linenos" data-linenos="4 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">tipoPrincipal</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span>
+</span><span id="__span-16-5"><span class="linenos" data-linenos="5 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">imagen</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span>
+</span><span id="__span-16-6"><span class="linenos" data-linenos="6 "></span><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">descripcion</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span>
+</span><span id="__span-16-7"><span class="linenos" data-linenos="7 "></span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nv">favorito</span><span class="p">:</span><span class="w"> </span><span class="kt">Boolean</span>
+</span><span id="__span-16-8"><span class="linenos" data-linenos="8 "></span><span class="p">)</span>
+</span></code></pre></div>
+<ul>
+<li>
+<p>ViewModel</p>
+<ul>
+<li>
+<p>Lista:</p>
+<ul>
+<li>LiveData/StateFlow con lista</li>
+<li>loading</li>
+<li>errors</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Vista</p>
+<ul>
+<li>ProgressBar</li>
+<li>RecyclerView</li>
+<li>Mensaje “No hay Pokémon”</li>
+<li>
+<p>Uso obligatorio de ViewBinding</p>
+</li>
+<li>
+<p>Item del RecyclerView:</p>
+<ul>
+<li>Imagen</li>
+</ul>
+</li>
+<li>
+<p>Pantalla de detalle</p>
+<p>Debe mostrar:</p>
+<ul>
+<li>nombre</li>
+<li>imagen</li>
+<li>tipo</li>
+<li>descripción</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Calificación</p>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Puntos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MVVM correcto</td>
+<td>1</td>
+</tr>
+<tr>
+<td>LiveData/StateFlow</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Corrutinas</td>
+<td>1</td>
+</tr>
+<tr>
+<td>RecyclerView</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Detalle</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div>
 </li>
 </ul>
 <!-- Resultados de Aprendizaje & Criterios de Evaluación -->
